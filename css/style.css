@@ -182,7 +182,9 @@ main{
     box-shadow: 1px 1px 5px black;
     font-weight: bold;
     color: #2a3632;
-    z-index:2;
+    z-index: 2;
+    font-family: 'Migha-Regular', sans-serif;
+    letter-spacing: 2px;
 }
 
 .banner_container>button:hover{ 
