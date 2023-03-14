@@ -304,7 +304,7 @@ main{
     letter-spacing: 4px;
 }
 .intro_section p{
-    font-size: 18px;
+    font-size: 1.25em;
 }
 
 .small_container{
@@ -488,12 +488,7 @@ main{
 .booking_section>form>button:hover::after{
     left: 169px;
 }
-.map_section{
-    display:flex;
-    justify-content: center;
-    flex-wrap:wrap;
-    overflow: hidden;
-}
+
 .contact_container{
     text-align: center;
     padding: 20px;
@@ -512,6 +507,7 @@ main{
 .contact_container p{
     margin-top:15px;
     color:#495e57;
+    font-size: 1.25em;
 }
 
 .contact_container a{
@@ -560,6 +556,9 @@ footer p{
     header, nav, main, footer{
         padding:0
     }
+    header img {
+        max-width: 230px;
+    }
     main {
         margin-top: -15px;
     }
@@ -574,10 +573,11 @@ footer p{
     }
 
     .intro_section h2,.booking_section>h2,.contact_container h2,.about_section>article>h2{
-        font-size:26px;
+        font-size:24x;
+        letter-spacing: 3px;
     }
 
-    .intro_section p,.about_section>article>p{
+    .intro_section p,.about_section>article>p,.contact_container p{
         font-size:16px;
     }
     .small_container>article{
