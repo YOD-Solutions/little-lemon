@@ -333,6 +333,10 @@ main{
     }
     
 }
+.small_container>article:hover figcaption{
+    color:#f4ce14;
+}
+
 
 .small_container>article img{
     width: 100%;
