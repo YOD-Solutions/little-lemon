@@ -82,7 +82,7 @@
             <form>
                 <div>
                     <div>
-                        <label for="people_select">Number of People</label>
+                       
                         <select id="people_select">
                             <option value="1">1 person</option>
                             <option value="2" selected=""selected">2 people</option>
@@ -95,12 +95,12 @@
                         </select>
                     </div>
                     <div>
-                        <label for="date">Date</label>
-                        <input type="date" id="date" name="date">
+                   
+                        <input type="text" id="date" name="date" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" placeholder="Date">                       
                     </div>
                     <div>
-                        <label for="time">Time</label>
-                    <input type="time" id="time" name="time">
+                      
+                        <input type="text" id="time" name="time" onfocus="(this.type='time')" onblur="if(!this.value)this.type='text'" placeholder="Time">
                     </div>
                 </div>
                 <button type="submit" value="Find a Table">Find a Table</button>
