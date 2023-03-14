@@ -21,37 +21,40 @@ html{
     font-size:14px;
 }
 body{
-    background-color: #bfeede;
+    background-color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 header,nav,main,footer{
-    max-width:1200px;
+    max-width:1400px;
     margin:auto;
     padding:0 15px;
+    position: relative;
 }
 header{
     display: flex;
     justify-content:center;
     align-items: stretch;
-    margin-top: 15px; 
+    margin-top: 15px;
+    margin-bottom: 15px; 
 }
 header img{
     height: auto;
     max-width:300px;
+}
+nav{
+    z-index:2;
 }
 
 nav>ul{
     display: flex;    
     flex-wrap: wrap;
     justify-content:center;
-    align-items: center;
-    background: #495e57;
-    border-radius: 10px;
+    align-items: center; 
     height: 60px;
     padding: 0 15px;
-    margin-bottom: 15px;
-    background-image: linear-gradient(to top, #1d382f, #bfeede);
+    margin-bottom: 15px;   
+    background-color: rgba(0,0,0,0.7);
 }
 
 nav>ul>li{
@@ -71,15 +74,18 @@ nav a{
 nav a:hover{
     color:#f4ce14
 }
+
+main{
+    margin-top:-75px;
+    z-index:1;
+}
 .banner_container{
     display:flex;
     justify-content: center;
     align-items: stretch;
     position:relative;
     background: black;
-    border-radius: 15px;
     margin-bottom: 15px;
-    box-shadow: 2px 2px 5px #495e57;
     overflow:hidden;
 }
 
@@ -139,12 +145,11 @@ nav a:hover{
     text-shadow: 0 0 20px #495e57, 0 0px 40px black, 0 0px 60px #fff;
     font-size: 40px;
     font-family: 'Migha-Regular', sans-serif;
-    color:#f4ce14;
+    color:white;
     letter-spacing: 3px;    
     text-align: center;
     max-width: 90%;
     z-index:2;
-
     animation-duration: 0.1s;
     animation-timing-function: cubic-bezier(0.46, 0.03, 0.52, 0.96);
     animation-delay: 0;
@@ -175,7 +180,6 @@ nav a:hover{
     width: 180px;
     height: 50px;
     font-size: 20px;
-    border-radius: 10px;
     border: none;
     box-shadow: 1px 1px 5px black;
     font-weight: bold;
@@ -279,6 +283,30 @@ nav a:hover{
         transform: scale(0.9) translateY(-20px) translateX(5px);
     }
 }
+
+
+.intro_section{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    color: #495e57;
+}
+
+.intro_section>div{
+    flex: 0 0 83.33%;
+}
+
+.intro_section h2{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-family: 'Migha-Regular', sans-serif;
+    letter-spacing: 4px;
+}
+.intro_section p{
+    font-size: 18px;
+}
+
 .small_container{
     display:flex;
     justify-content: center;
@@ -290,9 +318,7 @@ nav a:hover{
     flex:1;
     text-align: center;
     margin: 10px;
-    border-radius:15px;
     background:#2a3632;
-    box-shadow: 2px 2px 5px #495e57;
 }
 .small_container>article:hover{ 
     animation:card_zoom 0.5s alternate linear;
@@ -310,41 +336,39 @@ nav a:hover{
 
 .small_container>article img{
     width: 100%;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
     opacity: 0.65;
     height: auto;
 }
 
 .small_container>article figcaption{   
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    color:#f6e387;
-    padding:10px 0;
+    color:white;
+    padding:15px 0;
     font-size: 18px;    
 }
-.about_section{
-    background-image: url(/img/banner-2.jpg);
-    background-size: cover;
-    height: 710px;
-    margin-top: 15px;
-    margin-bottom: 30px;
+.about_section{   
+    background-color: #2a3632;
+    height: 430px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    border-radius: 15px;
-    box-shadow: 2px 2px 5px #495e57;
+    justify-content: center;
 }
 .about_section>article{
     padding: 40px;
     color: #495e57;    
     background-color: #fff;
     margin: 20px;
-    max-width: 300px;
-    border-radius: 15px;
-    box-shadow: 2px 2px 5px #495e57;
+    flex: 0 0 83.33%;
 }
-
+.about_section>article>h2{
+    text-align: center;
+    color: #495e57;
+    font-family: 'Migha-Regular',sans-serif;
+    font-size: 30px;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+}
 .about_section>article>p{
     font-size: 1.25em;
 }
@@ -357,19 +381,16 @@ nav a:hover{
 
 }
 .booking_section{
-    background-color: #2a3632;
     padding:20px;
-    border-radius: 15px;
-    box-shadow: 2px 2px 5px #495e57;
-    margin-bottom:20px
+    margin-top:50px
 }
 
 .booking_section>h2{
     text-align: center;
-    color:#f6e387;
+    color:#495e57;
     font-family: 'Migha-Regular',sans-serif;;
-    font-size: 24px;
-    letter-spacing: 3px;
+    font-size: 30px;
+    letter-spacing: 4px;
 }
 
 .booking_section>form{
@@ -387,12 +408,11 @@ nav a:hover{
 
 }
 .booking_section>form input, .booking_section>form select{
-    border-radius: 5px;
     width: 196px;
     height: 46px;
     margin: 10px;
     font-size: 18px;
-    border-color: #ccc;
+    border-color: #495e57;
     border-width: 1px;
     border-style: solid;
     color: #495e57;
@@ -413,9 +433,8 @@ nav a:hover{
 .booking_section>form>button{
     margin-top: 15px;
     padding: 10px 15px;
-    font-size: 18px;
-    border-radius: 5px;
-    border-color: #ccc;
+    font-size: 18px; 
+    border-color: #495e57;
     border-width: 1px;
     border-style: solid;
     color: #495e57;
@@ -467,9 +486,6 @@ nav a:hover{
     display:flex;
     justify-content: center;
     flex-wrap:wrap;
-    border-radius: 15px;
-    box-shadow: 2px 2px 5px #495e57;
-    background-color: #2a3632;
     overflow: hidden;
 }
 .contact_container{
@@ -482,26 +498,20 @@ nav a:hover{
 }
 .contact_container h2{
     text-align: center;
-    color: #f6e387;
+    color: #495e57;
     font-family: 'Migha-Regular',sans-serif;
-    font-size: 24px;
-    letter-spacing: 3px;
+    font-size: 30px;
+    letter-spacing: 4px;
 }
 .contact_container p{
     margin-top:15px;
-    color:white;
+    color:#495e57;
 }
 
 .contact_container a{
-    color:#f6e387;
+    color:black;
 }
-.map_container{
-    position: relative;
-    width:100%;
-}
-.map_container>iframe{
-    min-height:400px;
-}
+
 
 footer{
     display: flex;
@@ -535,11 +545,28 @@ footer img{
 }
 
 @media screen and (max-width:576px){
+    header, nav, main, footer{
+        padding:0
+    }
+    main {
+        margin-top: -15px;
+    }
     .banner_container h1 {
         font-size: 24px;
     }
     .banner_container>button {
+        font-size:16px;
+        width: 150px;
+        height: 40px;
         top: calc(50% + 20px);
+    }
+
+    .intro_section h2,.booking_section>h2,.contact_container h2,.about_section>article>h2{
+        font-size:26px;
+    }
+
+    .intro_section p,.about_section>article>p{
+        font-size:16px;
     }
     .small_container>article{
         flex-basis:100%
