@@ -399,6 +399,9 @@ nav a:hover{
     padding-left: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.booking_section>form select{
+    width: 208px;
+}
 .booking_section>form input::placeholder{
     color: #495e57;
 }
