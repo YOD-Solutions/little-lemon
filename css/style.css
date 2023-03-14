@@ -489,13 +489,14 @@ main{
     left: 169px;
 }
 
-.contact_container{
-    text-align: center;
-    padding: 20px;
+.map_section{
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    margin: 50px 0;
+}
+
+.contact_container{
+    flex: 0 0 83.33%;
 }
 .contact_container h2{
     text-align: center;
@@ -508,6 +509,7 @@ main{
     margin-top:15px;
     color:#495e57;
     font-size: 1.25em;
+    text-align: center;
 }
 
 .contact_container a{
@@ -532,12 +534,6 @@ footer p{
 }
 
 
-@media screen and (min-width:992px){
-    .contact_container,.map_container{
-        flex: 1;
-    }
-    
-}
 @media screen and (max-width:767px){
     .banner_container h1{
         font-size:30px;
@@ -573,7 +569,7 @@ footer p{
     }
 
     .intro_section h2,.booking_section>h2,.contact_container h2,.about_section>article>h2{
-        font-size:24x;
+        font-size:24px;
         letter-spacing: 3px;
     }
 
