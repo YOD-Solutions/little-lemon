@@ -415,6 +415,7 @@ main{
     border-style: solid;
     color: #495e57;
     padding-left: 10px;
+    background-color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .booking_section>form select{
@@ -441,6 +442,7 @@ main{
     height: 46px;
     position: relative;
     overflow: hidden;
+    background-color: white;
 }
 .booking_section>form>button::before{
     position: absolute;
