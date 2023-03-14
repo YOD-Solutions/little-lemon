@@ -504,16 +504,28 @@ main{
     font-family: 'Migha-Regular',sans-serif;
     font-size: 30px;
     letter-spacing: 4px;
+    margin-bottom: 30px;
+}
+.address_container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.address_container>div{
+    margin-top:15px;
+}
+.address_container>div:first-child{
+    margin-right:10px;
 }
 .contact_container p{
-    margin-top:15px;
+   
     color:#495e57;
     font-size: 1.25em;
-    text-align: center;
+    line-height: 24px;
 }
 
 .contact_container a{
-    color:black;
+    color:#495e57;
+    text-decoration: none;
 }
 
 
