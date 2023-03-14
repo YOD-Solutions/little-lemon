@@ -508,12 +508,11 @@ main{
 }
 .address_container{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 .address_container>div{
     margin-top:15px;
-    min-width: 376px;
     padding-right: 40px;
 }
 
