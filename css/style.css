@@ -311,14 +311,16 @@ main{
     display:flex;
     justify-content: center;
     align-items:stretch;
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
+    color: #495e57;
+    margin-top: 100px;
 }
 
 .small_container article{
     flex:1;
     text-align: center;
     margin: 10px;
-    background:#2a3632;
+    background: white;
 }
 .small_container article:hover{ 
     animation:card_zoom 0.5s alternate linear;
@@ -333,21 +335,23 @@ main{
     }
     
 }
-.small_container article:hover figcaption{
-    color:#f4ce14;
+.small_container h2{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family: 'Migha-Regular', sans-serif;
+    letter-spacing: 3px;
 }
-
 
 .small_container article img{
     width: 100%;
-    opacity: 0.65;
     height: auto;
 }
 
 .small_container article figcaption{   
-    color:white;
-    padding:15px 0;
-    font-size: 18px;    
+    padding: 15px 10px;
+    font-size: 1.1em;
+    text-align: left;    
 }
 
 .menu_section{
@@ -584,6 +588,7 @@ main{
 }
 .subscribe_section button:hover{
     color: #f6e387;
+    background-color: #1d382f;
 }
 
 .map_section{
@@ -642,9 +647,14 @@ footer p{
     .banner_container h1 img {
         height: 30px;
     }
+    .small_container article{
+        flex-basis:100%;
+        margin-bottom:30px;
+    }
     .small_container figcaption{ 
         font-size:16px;
     }
+
 
 
 }
@@ -673,13 +683,9 @@ footer p{
         font-size:24px;
         letter-spacing: 3px;
     }
-
     .intro_section p,.about_section p,.address_container p,.menu_section figcaption{
-        font-size:16px;,
-    }
-    .small_container>article{
-        flex-basis:100%
-    }
+        font-size:16px;
+    }  
     #footer_logo{
         padding-left: 15px;
     }
