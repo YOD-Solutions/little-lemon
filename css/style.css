@@ -354,7 +354,7 @@ main{
     display: block;
     content: "";
     position: absolute;
-    bottom: -100px;
+    bottom: -75px;
     width: 60px;
     height: 60px;
     background: #fff;
@@ -367,7 +367,7 @@ main{
     display: block;
     content: "";
     position: absolute;
-    bottom: -75px;
+    bottom: -50px;
     width: 60px;
     height: 60px;
     background: #fff;
@@ -413,7 +413,7 @@ main{
 }
 
 .menu_section{
-    margin: 75px 0;   
+    margin: 50px 0;   
     background-color: #2a3632;
     padding: 40px 0;
     box-shadow: inset 0px 0px 0px 4px #e4b34c;
@@ -493,7 +493,7 @@ main{
     display: block;
     content: "";
     position: absolute;
-    top: -50px;
+    top: -25px;
     right: calc(50% - 30px);
     width: 60px;
     height: 60px;
@@ -507,7 +507,7 @@ main{
     display: block;
     content: "";
     position: absolute;
-    top: -23px;
+    top: 2px;
     right: calc(50% - 30px);
     width: 60px;
     height: 60px;
