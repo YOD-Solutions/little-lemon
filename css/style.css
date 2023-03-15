@@ -548,6 +548,7 @@ main{
 
 .subscribe_section form{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding: 30px 15px;
@@ -668,7 +669,7 @@ footer p{
         top: calc(50% + 20px);
     }
 
-    .intro_section h2,.booking_section h2,.about_section h2,.menu_section h2{
+    .intro_section h2,.booking_section h2,.about_section h2,.menu_section h2,.subscribe_section h2{
         font-size:24px;
         letter-spacing: 3px;
     }
