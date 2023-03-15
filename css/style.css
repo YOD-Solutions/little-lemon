@@ -630,6 +630,39 @@ main{
     text-decoration: none;
 }
 
+.gallery_section{
+    margin-top:75px;
+}
+.gallery_section h2{
+    text-align: center;
+    color: #495e57;
+    font-family: 'Migha-Regular',sans-serif;
+    font-size: 30px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.gallery_container{
+    display: flex;
+    overflow: hidden;    
+}
+.gallery_container .slides{
+    min-width:25%;
+    padding: 0 5px;
+    animation:gallery_slide 10s linear infinite;
+}
+
+@keyframes gallery_slide{
+    from{
+        transform:translate(0%);
+    }
+    to{
+        transform: translate(-925%);
+    }
+}
+.gallery_container img{
+    max-width: 100%;
+}
 
 footer{
     display: flex;
