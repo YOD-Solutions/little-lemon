@@ -105,13 +105,12 @@ nav>ul>li{
 
 nav a{
     text-decoration: none;
-    font-size: 15px;
-    color: white;
-    text-transform: uppercase;
-    font-family: 'Caviar Dreams Bold', sans-serif;  
+    font-size: 18px;
+    color: #E4B34C;
+    font-family: 'Caviar Dreams Bold Italic', sans-serif;  
 }
 nav a:hover{
-    color:#f4ce14
+    color:white;
 }
 
 main{
@@ -182,7 +181,7 @@ main{
     text-shadow: 0 0 20px #495e57, 0 0px 40px black, 0 0px 60px #fff;
     font-size: 40px;
     font-family: 'Metropolis 1920 Regular', sans-serif;
-    color: #c9ab81;
+    color: #E4B34C;
     letter-spacing: 3px;    
     text-align: center;
     max-width: 90%;
@@ -224,7 +223,7 @@ main{
     font-family: 'Caviar Dreams Bold', sans-serif;
     letter-spacing: 2px;
     background: transparent;
-    border: 1px solid #c9ab81;
+    border: 1px solid #E4B34C;
 }
 
 .banner_container>button:hover{ 
@@ -348,8 +347,20 @@ main{
     flex-wrap: wrap;    
     color: #495e57;
     margin-top: 75px;
+    position: relative;
 }
-
+.small_container::after{
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: -100px;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50px;
+    margin: -52px auto 0;
+    z-index: 99;
+}
 .small_container article{
     flex:1;
     text-align: center;
@@ -395,7 +406,7 @@ main{
 }
 
 .menu_section h2{
-    color: #c9ab81;
+    color: #E4B34C;
 }
 
 .menu_container{
@@ -459,10 +470,23 @@ main{
 
 .booking_section{
     padding:20px;
-    margin-top:50px
+    margin-top:50px;
+    position: relative;
 }
 
-
+.booking_section::before{
+    display: block;
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: calc(50% - 30px);
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50px;
+    margin: -52px auto 0;
+    z-index: 99;
+}
 .booking_section form{
     display: flex;
     justify-content: center;
@@ -636,33 +660,7 @@ main{
     text-decoration: none;
 }
 
-.gallery_section{
-    margin-top:25px;
-}
 
-.gallery_container{
-    display: flex;
-    overflow: hidden;    
-}
-.gallery_container .slides{
-    min-width:25%;
-    background-color: #2a3632;
-    padding:0 5px;
-    animation:gallery_slide 30s linear infinite;
-}
-
-@keyframes gallery_slide{
-    from{
-        transform:translate(0%);
-    }
-    to{
-        transform: translate(-925%);
-    }
-}
-.gallery_container img{
-    max-width: 100%;
-    opacity: 0.5;
-}
 
 footer{
     display: flex;
@@ -707,6 +705,10 @@ footer p{
     header img {
         max-width: 230px;
     }
+    nav>ul{
+        background-color: rgba(0,0,0,0.9);
+    }
+    
     main {
         margin-top: -15px;
     }
