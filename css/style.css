@@ -52,26 +52,27 @@ html{
 body{
     background-color: white;
     font-family: "Josefin Sans",sans-serif;    
-    background-image: url(/img/body-bg.jpg);
+    /*background-image: url(/img/body-bg.jpg);
     background-position: left top;
     background-size: auto;
     background-repeat: repeat;
-    background-attachment: fixed;
+    background-attachment: fixed;*/
+    background-color: rgb(42, 54, 50);
+}
+header,nav,main,footer{
+    max-width:1400px;
+    margin:auto;
+    position: relative;   
 }
 h2 {
     text-align: center;
-    color:#495e57;
+    color:#464646;
     margin-bottom: 30px;
     font-size: 32px;
     font-family: 'Caviar Dreams Bolder', sans-serif;
     text-transform: uppercase;
 }
-header,nav,main,footer{
-    max-width:1400px;
-    margin:auto;
-    padding:0 15px;
-    position: relative;
-}
+
 header{
     display: flex;
     justify-content:center;
@@ -83,9 +84,6 @@ header img{
     height: auto;
     max-width:300px;
 }
-nav{
-    z-index:2;
-}
 
 nav>ul{
     display: flex;    
@@ -93,8 +91,6 @@ nav>ul{
     justify-content:center;
     align-items: center; 
     height: 60px;
-    padding: 0 15px;
-    margin-bottom: 15px;   
     background-color: rgb(42, 54, 50);
 }
 
@@ -114,8 +110,8 @@ nav a:hover{
 }
 
 main{
-    margin-top:-15px;
-    z-index:1;
+    background-color: white;
+    box-shadow: 0 0 5px black;
 }
 .banner_container{
     display:flex;
@@ -361,7 +357,6 @@ main{
     border-radius: 50px;
     margin: -52px auto 0;
     z-index: 3;
-    box-shadow: inset 0px 0px 0px 4px #e4b34c;
 }
 .small_container::before{
     display: block;
@@ -393,8 +388,7 @@ main{
     }
     
 }
-.small_container h2{
-    text-align: left;
+.small_container h2{    
     font-size: 18px;
     margin-top: 10px;
     margin-bottom: 0;
@@ -409,18 +403,32 @@ main{
 .small_container figcaption{   
     padding: 10px;
     font-size: 1.1em;
-    text-align: left;   
+    color:#a5a5a5; 
 }
 
 .menu_section{
     margin: 50px 0;   
     background-color: #2a3632;
     padding: 40px 0;
-    box-shadow: inset 0px 0px 0px 4px #e4b34c;
+    background-image: url(/img/bgfoodicon.png);
+    position: relative;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+.menu_section::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(67,67,67,.8);
 }
 
 .menu_section h2{
-    color: #E4B34C;
+    color: white;
+    position: relative;
 }
 
 .menu_container{
@@ -428,6 +436,7 @@ main{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .menu_container article{
     margin:15px;
@@ -469,7 +478,19 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: inset 0px 0px 0px 4px #e4b34c;
+    background-image: url(/img/bgfoodicon.png);
+    position: relative;
+    background-position: center;
+    background-repeat: repeat;
+}
+.about_section::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(67,67,67,.8);
 }
 .about_section article{
     padding: 40px;
@@ -477,6 +498,7 @@ main{
     background-color: #fff;
     margin: 20px;
     flex: 0 0 75%;
+    position: relative;
 }
 
 .about_section p{
@@ -501,7 +523,7 @@ main{
     border-radius: 50px;
     margin: -52px auto 0;
     z-index: 3;
-    box-shadow: inset 0px 0px 0px 4px #e4b34c;
+
 }
 .booking_section::after{
     display: block;
@@ -559,17 +581,16 @@ main{
 .booking_section button{
     margin-top: 15px;
     padding: 10px 15px;
-    font-size: 18px; 
-    border-color: #495e57;
+    font-size: 16px; 
+    border-color: #E4B34C;
     border-width: 1px;
     border-style: solid;
     color: white;
-    font-weight: bold;
     width: 196px;
     height: 46px;
     position: relative;
     overflow: hidden;
-    background-color: #2a3632;
+    background-color: #E4B34C;
     font-family: "Josefin Sans",sans-serif;   
 }
 .booking_section button::before{
@@ -629,7 +650,7 @@ main{
     width: 196px;
     height: 46px;
     font-size: 18px;
-    border-color: #2a3632;
+    border-color: #E4B34C;
     border-width: 1px;
     border-style: solid;
     color: #495e57;
@@ -638,22 +659,21 @@ main{
 }
 .subscribe_section input::placeholder{
     font-size:15px;
-    font-family: 'Caviar Dreams', sans-serif;
+    font-family: "Josefin Sans",sans-serif;
 }
 .subscribe_section button{
     padding: 10px 15px;
     font-size: 16px;
-    border-color: #2a3632;
+    border-color: #E4B34C;
     border-width: 1px;
     border-style: solid;
     color: white;
-    font-weight: bold;
     width: 96px;
     height: 48px;
     position: relative;
     overflow: hidden;
-    background-color: #2a3632;
-    font-family: 'Caviar Dreams Bolder', sans-serif;
+    background-color: #E4B34C;
+    font-family: "Josefin Sans",sans-serif;
 }
 .subscribe_section button:hover{
     color: #f6e387;
@@ -665,15 +685,28 @@ main{
     justify-content: center;
     margin: 50px 0;
     border-top: 1px solid #ccc;
-    padding-top: 35px;
+    padding: 35px 0;
+    background-image: url(/img/bgfoodicon.png);
+    position: relative;
+    background-position: center;
+    background-repeat: repeat;
 }
 
-
+.map_section::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(67,67,67,.8);
+}
 .address_container{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     flex: 0 0 83.33%;
+    position: relative;
 }
 .address_container div{
     margin-top:15px;
@@ -681,13 +714,13 @@ main{
 
 .address_container p{
    
-    color:#495e57;
+    color:white;
     font-size: 1.15em;
     line-height: 24px;
 }
 
 .address_container a{
-    color:#495e57;
+    color:white;
     text-decoration: none;
 }
 
