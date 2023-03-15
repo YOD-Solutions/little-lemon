@@ -23,6 +23,11 @@ html{
 body{
     background-color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url(/img/body-bg.jpg);
+    background-position: left top;
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
 }
 
 header,nav,main,footer{
@@ -356,11 +361,13 @@ main{
 }
 
 .menu_section{
-    margin: 75px 0;
-    color: #495e57;
+    margin: 75px 0;   
+    background-color: #2a3632;
+    padding: 40px 0;
 }
 
 .menu_section h2{
+    color: white;
     text-align: center;
     margin-bottom: 30px;
     font-size: 30px;
@@ -399,6 +406,7 @@ main{
 }
 .menu_container figcaption{
     font-size: 1.25em;
+    color:#b7b095;
 }
 .menu_container figure figcaption:nth-of-type(1){
     margin-top: 15px;
