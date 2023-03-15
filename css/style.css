@@ -631,7 +631,7 @@ main{
 }
 
 .gallery_section{
-    margin-top:75px;
+    margin-top:25px;
 }
 .gallery_section h2{
     text-align: center;
@@ -648,8 +648,8 @@ main{
 }
 .gallery_container .slides{
     min-width:25%;
-    padding: 0 5px;
-    animation:gallery_slide 10s linear infinite;
+    background-color: black;
+    animation:gallery_slide 30s linear infinite;
 }
 
 @keyframes gallery_slide{
@@ -662,6 +662,7 @@ main{
 }
 .gallery_container img{
     max-width: 100%;
+    opacity: 0.5;
 }
 
 footer{
