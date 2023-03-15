@@ -207,7 +207,7 @@ main{
 }
 
 .banner_container h1 img{
-    height: 40px;
+    height: 36px;
 }
 .banner_container button>span{
     opacity: 0;
@@ -653,7 +653,7 @@ footer p{
         font-size:30px;
     }
     .banner_container h1 img {
-        height: 30px;
+        height: 22px;
     }
     .small_container article{
         flex-basis:100%;
