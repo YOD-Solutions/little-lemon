@@ -336,28 +336,28 @@ main{
     
 }
 .small_container h2{
-    text-align: center;
-    margin-bottom: 10px;
+    text-align: left;
     font-size: 18px;
     font-family: 'Migha-Regular', sans-serif;
     letter-spacing: 3px;
+    margin-top: 10px;
+    padding: 0 10px;
 }
 
-.small_container article img{
+.small_container img{
     width: 100%;
     height: auto;
 }
 
-.small_container article figcaption{   
-    padding: 15px 10px;
+.small_container figcaption{   
+    padding: 10px;
     font-size: 1.1em;
-    text-align: left;    
+    text-align: left;   
 }
 
 .menu_section{
-    margin: 50px 0;
+    margin: 75px 0;
     color: #495e57;
-    padding: 50px 0;
 }
 
 .menu_section h2{
