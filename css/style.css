@@ -85,7 +85,7 @@ main{
     align-items: stretch;
     position:relative;
     background: black;
-    margin-bottom: 15px;
+    margin-bottom: 75px;
     overflow:hidden;
 }
 
@@ -172,7 +172,7 @@ main{
     }
 }
 
-.banner_container>button{
+.banner_container button{
     position: absolute;
     top: calc(50% + 40px);
     width: 180px;
@@ -204,7 +204,7 @@ main{
 .banner_container h1 img{
     height: 40px;
 }
-.banner_container>button>span{
+.banner_container button>span{
     opacity: 0;
     display: block;
     width: 20px;
@@ -217,21 +217,21 @@ main{
     background-color: #f4ce14;
 }
 
-.banner_container>button>span:nth-of-type(1){
+.banner_container button>span:nth-of-type(1){
     -webkit-animation: bubbleAnimation1 1.3s linear infinite;
     animation: bubbleAnimation1 1.3s linear infinite;
     -webkit-animation-iteration-count: 8;
     animation-iteration-count: 8;
 }
 
-.banner_container>button>span:nth-of-type(2){
+.banner_container button>span:nth-of-type(2){
     -webkit-animation: bubbleAnimation2 1.7s linear infinite;
     animation: bubbleAnimation2 1.7s linear infinite;
     -webkit-animation-iteration-count: 6;
     animation-iteration-count: 6;
     right:5px;
 }
-.banner_container>button>span:nth-of-type(3){
+.banner_container button>span:nth-of-type(3){
     -webkit-animation: bubbleAnimation1 0.8s linear infinite;
     animation: bubbleAnimation1 0.8s linear infinite;
     -webkit-animation-iteration-count: 13;
@@ -292,7 +292,7 @@ main{
     color: #495e57;
 }
 
-.intro_section>div{
+.intro_section div{
     flex: 0 0 83.33%;
 }
 
@@ -314,13 +314,13 @@ main{
     flex-wrap: wrap;
 }
 
-.small_container>article{
+.small_container article{
     flex:1;
     text-align: center;
     margin: 10px;
     background:#2a3632;
 }
-.small_container>article:hover{ 
+.small_container article:hover{ 
     animation:card_zoom 0.5s alternate linear;
  
 }
@@ -333,21 +333,71 @@ main{
     }
     
 }
-.small_container>article:hover figcaption{
+.small_container article:hover figcaption{
     color:#f4ce14;
 }
 
 
-.small_container>article img{
+.small_container article img{
     width: 100%;
     opacity: 0.65;
     height: auto;
 }
 
-.small_container>article figcaption{   
+.small_container article figcaption{   
     color:white;
     padding:15px 0;
     font-size: 18px;    
+}
+
+.menu_section{
+    margin: 50px 0;
+    color: #495e57;
+    padding: 50px 0;
+}
+
+.menu_section h2{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-family: 'Migha-Regular', sans-serif;
+    letter-spacing: 4px;
+}
+
+.menu_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.menu_container article{
+    margin:15px;
+    text-align: center;
+}
+.menu_container img{
+    max-width:150px;
+    height: auto;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 50%;
+}
+.menu_container img:hover{ 
+    animation:menu_zoom 0.5s alternate linear;
+ 
+}
+@keyframes menu_zoom{
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    
+}
+.menu_container figcaption{
+    font-size: 1.25em;
+}
+.menu_container figure figcaption:nth-of-type(1){
+    margin-top: 15px;
 }
 .about_section{   
     background-color: #2a3632;
@@ -358,14 +408,14 @@ main{
     align-items: center;
     justify-content: center;
 }
-.about_section>article{
+.about_section article{
     padding: 40px;
     color: #495e57;    
     background-color: #fff;
     margin: 20px;
     flex: 0 0 75%;
 }
-.about_section>article>h2{
+.about_section h2{
     text-align: center;
     color: #495e57;
     font-family: 'Migha-Regular',sans-serif;
@@ -373,23 +423,16 @@ main{
     letter-spacing: 4px;
     margin-bottom: 30px;
 }
-.about_section>article>p{
+.about_section p{
     font-size: 1.25em;
 }
 
-.about_section>article strong{
-    font-style: italic;    
-}
-.about_section>article::first-letter{
-    font-size: 35px;   
-
-}
 .booking_section{
     padding:20px;
     margin-top:50px
 }
 
-.booking_section>h2{
+.booking_section h2{
     text-align: center;
     color:#495e57;
     font-family: 'Migha-Regular',sans-serif;;
@@ -397,21 +440,21 @@ main{
     letter-spacing: 4px;
 }
 
-.booking_section>form{
+.booking_section form{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     padding: 30px 15px;
 }
-.booking_section>form>div{
+.booking_section form>div{
     display:flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 
 }
-.booking_section>form input, .booking_section>form select{
+.booking_section input, .booking_section select{
     width: 196px;
     height: 46px;
     margin: 10px;
@@ -424,18 +467,18 @@ main{
     background-color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.booking_section>form select{
+.booking_section select{
     width: 208px;
 }
-.booking_section>form input::placeholder{
+.booking_section input::placeholder{
     color: #495e57;
 }
 
-.booking_section>form input:focus-visible{
+.booking_section input:focus-visible{
     outline:none;
 }
 
-.booking_section>form>button{
+.booking_section button{
     margin-top: 15px;
     padding: 10px 15px;
     font-size: 18px; 
@@ -450,7 +493,7 @@ main{
     overflow: hidden;
     background-color: white;
 }
-.booking_section>form>button::before{
+.booking_section button::before{
     position: absolute;
     border-style: solid;
     border-width: 3px 3px 0 0;
@@ -464,7 +507,7 @@ main{
     transition: all 300ms ease;
     top: calc(50% - 5px);
 }
-.booking_section>form>button::after{
+.booking_section button::after{
     position: absolute;
     border-style: solid;
     border-width: 3px 3px 0 0;
@@ -478,14 +521,14 @@ main{
     transition: all 300ms ease;
     top: calc(50% - 5px);
 }
-.booking_section>form>button:hover{
+.booking_section button:hover{
     color:#f6e387;
     background-color: #1d382f;
 }
-.booking_section>form>button:hover::before{
+.booking_section button:hover::before{
     right: -11px;
 }
-.booking_section>form>button:hover::after{
+.booking_section button:hover::after{
     left: 169px;
 }
 
@@ -495,34 +538,25 @@ main{
     margin: 50px 0;
 }
 
-.contact_container{
-    flex: 0 0 83.33%;
-}
-.contact_container h2{
-    text-align: center;
-    color: #495e57;
-    font-family: 'Migha-Regular',sans-serif;
-    font-size: 30px;
-    letter-spacing: 4px;
-    margin-bottom: 30px;
-}
+
 .address_container{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    flex: 0 0 83.33%;
 }
-.address_container>div{
+.address_container div{
     margin-top:15px;
 }
 
-.contact_container p{
+.address_container p{
    
     color:#495e57;
     font-size: 1.25em;
     line-height: 24px;
 }
 
-.contact_container a{
+.address_container a{
     color:#495e57;
     text-decoration: none;
 }
@@ -579,12 +613,12 @@ footer p{
         top: calc(50% + 20px);
     }
 
-    .intro_section h2,.booking_section>h2,.contact_container h2,.about_section>article>h2{
+    .intro_section h2,.booking_section>h2,.about_section>article>h2{
         font-size:24px;
         letter-spacing: 3px;
     }
 
-    .intro_section p,.about_section>article>p,.contact_container p{
+    .intro_section p,.about_section>article>p,.address_container p{
         font-size:16px;
     }
     .small_container>article{
