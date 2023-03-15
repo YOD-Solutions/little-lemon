@@ -3,18 +3,47 @@
     margin:0px;
     padding:0px;
 }
+
 @font-face {
-    font-family: 'Migha-Regular';
-    src: url('/fonts/Migha/Migha-Regular.otf') format('opentype');
-}
-@font-face {
-    font-family: 'Migha-Bold';
-    src: url('/fonts/Migha/Migha-Bold.otf') format('opentype');
+    font-family: 'Metropolis 1920 Regular';
+    src: url('/fonts/Metropolis/Metropolis 1920 Regular.otf') format('opentype');
 }
 
 @font-face {
-    font-family: 'Migha-Black';
-    src: url('/fonts/Migha/Migha-Black.otf') format('opentype');
+    font-family: 'Caviar Dreams';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/fonts/Caviar Dreams/CaviarDreams.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Caviar Dreams Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/fonts/Caviar Dreams/CaviarDreamsItalic.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Caviar Dreams Bold';
+    font-style: normal;
+    font-weight: bold;
+    src: url('/fonts/Caviar Dreams/CaviarDreams_Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Caviar Dreams Bolder';
+    font-style: normal;
+    font-weight: bold;
+    src: url('/fonts/Caviar Dreams/caviardreams_bold-webfont.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Caviar Dreams Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/fonts/Caviar Dreams/CaviarDreams_BoldItalic.woff') format('woff');
 }
 
 html{
@@ -22,14 +51,21 @@ html{
 }
 body{
     background-color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Josefin Sans",sans-serif;    
     background-image: url(/img/body-bg.jpg);
     background-position: left top;
     background-size: auto;
     background-repeat: repeat;
     background-attachment: fixed;
 }
-
+h2 {
+    text-align: center;
+    color:#495e57;
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-family: 'Caviar Dreams Bolder', sans-serif;
+    text-transform: uppercase;
+}
 header,nav,main,footer{
     max-width:1400px;
     margin:auto;
@@ -72,9 +108,7 @@ nav a{
     font-size: 15px;
     color: white;
     text-transform: uppercase;
-    font-weight: bold;
-    font-family: 'Migha-Regular', sans-serif;
-    letter-spacing: 2px;   
+    font-family: 'Caviar Dreams Bold', sans-serif;  
 }
 nav a:hover{
     color:#f4ce14
@@ -147,8 +181,8 @@ main{
     top: calc(50% - 30px);
     text-shadow: 0 0 20px #495e57, 0 0px 40px black, 0 0px 60px #fff;
     font-size: 40px;
-    font-family: 'Migha-Regular', sans-serif;
-    color:white;
+    font-family: 'Metropolis 1920 Regular', sans-serif;
+    color: #c9ab81;
     letter-spacing: 3px;    
     text-align: center;
     max-width: 90%;
@@ -183,13 +217,14 @@ main{
     width: 180px;
     height: 50px;
     font-size: 20px;
-    border: none;
     box-shadow: 1px 1px 5px black;
     font-weight: bold;
-    color: #2a3632;
+    color: white;
     z-index: 2;
-    font-family: 'Migha-Regular', sans-serif;
+    font-family: 'Caviar Dreams Bold', sans-serif;
     letter-spacing: 2px;
+    background: transparent;
+    border: 1px solid #c9ab81;
 }
 
 .banner_container>button:hover{ 
@@ -219,7 +254,7 @@ main{
     right: 0;
     top: -2px;
     overflow-x: hidden;
-    background-color: #f4ce14;
+    background-color: #c9ab81;
 }
 
 .banner_container button>span:nth-of-type(1){
@@ -301,13 +336,7 @@ main{
     flex: 0 0 83.33%;
 }
 
-.intro_section h2{
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 30px;
-    font-family: 'Migha-Regular', sans-serif;
-    letter-spacing: 4px;
-}
+
 .intro_section p{
     font-size: 1.25em;
 }
@@ -343,9 +372,8 @@ main{
 .small_container h2{
     text-align: left;
     font-size: 18px;
-    font-family: 'Migha-Regular', sans-serif;
-    letter-spacing: 3px;
     margin-top: 10px;
+    margin-bottom: 0;
     padding: 0 10px;
 }
 
@@ -367,12 +395,7 @@ main{
 }
 
 .menu_section h2{
-    color: white;
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 30px;
-    font-family: 'Migha-Regular', sans-serif;
-    letter-spacing: 4px;
+    color: #c9ab81;
 }
 
 .menu_container{
@@ -406,10 +429,12 @@ main{
 }
 .menu_container figcaption{
     font-size: 1.25em;
-    color:#b7b095;
+    color: #c9ab81;
 }
 .menu_container figure figcaption:nth-of-type(1){
     margin-top: 15px;
+    margin-bottom: 5px;
+    color: white;
 }
 .about_section{   
     background-color: #2a3632;
@@ -427,14 +452,7 @@ main{
     margin: 20px;
     flex: 0 0 75%;
 }
-.about_section h2{
-    text-align: center;
-    color: #495e57;
-    font-family: 'Migha-Regular',sans-serif;
-    font-size: 30px;
-    letter-spacing: 4px;
-    margin-bottom: 30px;
-}
+
 .about_section p{
     font-size: 1.25em;
 }
@@ -444,13 +462,6 @@ main{
     margin-top:50px
 }
 
-.booking_section h2{
-    text-align: center;
-    color:#495e57;
-    font-family: 'Migha-Regular',sans-serif;;
-    font-size: 30px;
-    letter-spacing: 4px;
-}
 
 .booking_section form{
     display: flex;
@@ -477,7 +488,7 @@ main{
     color: #495e57;
     padding-left: 10px;
     background-color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Caviar Dreams Bold', sans-serif;
 }
 .booking_section select{
     width: 208px;
@@ -504,6 +515,7 @@ main{
     position: relative;
     overflow: hidden;
     background-color: white;
+    font-family: 'Caviar Dreams Bold', sans-serif;
 }
 .booking_section button::before{
     position: absolute;
@@ -550,14 +562,6 @@ main{
     margin-top: 50px;
 }
 
-.subscribe_section h2{
-    text-align: center;
-    color: #495e57;
-    font-family: 'Migha-Regular',sans-serif;
-    font-size: 30px;
-    letter-spacing: 4px;
-}
-
 .subscribe_section form{
     display: flex;
     flex-wrap: wrap;
@@ -578,7 +582,8 @@ main{
     background-color: white;   
 }
 .subscribe_section input::placeholder{
-    font-size:15px
+    font-size:15px;
+    font-family: 'Caviar Dreams', sans-serif;
 }
 .subscribe_section button{
     padding: 10px 15px;
@@ -593,6 +598,7 @@ main{
     position: relative;
     overflow: hidden;
     background-color: #2a3632;
+    font-family: 'Caviar Dreams Bolder', sans-serif;
 }
 .subscribe_section button:hover{
     color: #f6e387;
@@ -632,14 +638,6 @@ main{
 
 .gallery_section{
     margin-top:25px;
-}
-.gallery_section h2{
-    text-align: center;
-    color: #495e57;
-    font-family: 'Migha-Regular',sans-serif;
-    font-size: 30px;
-    letter-spacing: 4px;
-    margin-bottom: 10px;
 }
 
 .gallery_container{
@@ -695,7 +693,7 @@ footer p{
         margin-bottom:30px;
     }
     .small_container figcaption{ 
-        font-size:16px;
+        font-size:15px;
     }
 
 
@@ -724,7 +722,6 @@ footer p{
 
     .intro_section h2,.booking_section h2,.about_section h2,.menu_section h2,.subscribe_section h2{
         font-size:24px;
-        letter-spacing: 3px;
     }
     .intro_section p,.about_section p,.address_container p,.menu_section figcaption{
         font-size:16px;
