@@ -95,7 +95,7 @@ nav>ul{
     height: 60px;
     padding: 0 15px;
     margin-bottom: 15px;   
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgb(42, 54, 50);
 }
 
 nav>ul>li{
@@ -107,14 +107,14 @@ nav a{
     text-decoration: none;
     font-size: 18px;
     color: #E4B34C;
-    font-family: 'Caviar Dreams Bold Italic', sans-serif;  
+    font-family: 'Caviar Dreams Bold', sans-serif;  
 }
 nav a:hover{
     color:white;
 }
 
 main{
-    margin-top:-75px;
+    margin-top:-15px;
     z-index:1;
 }
 .banner_container{
@@ -125,6 +125,7 @@ main{
     background: black;
     margin-bottom: 75px;
     overflow:hidden;
+    box-shadow: inset 0px 0px 0px 4px #e4b34c;
 }
 
 .banner_container>img{
@@ -346,7 +347,7 @@ main{
     align-items:stretch;
     flex-wrap: wrap;    
     color: #495e57;
-    margin-top: 75px;
+    margin-top: 50px;
     position: relative;
 }
 .small_container::after{
@@ -359,7 +360,19 @@ main{
     background: #fff;
     border-radius: 50px;
     margin: -52px auto 0;
-    z-index: 99;
+    z-index: 3;
+    box-shadow: inset 0px 0px 0px 4px #e4b34c;
+}
+.small_container::before{
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: -75px;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    margin: -52px auto 0;
+    z-index: 4;
 }
 .small_container article{
     flex:1;
@@ -403,6 +416,7 @@ main{
     margin: 75px 0;   
     background-color: #2a3632;
     padding: 40px 0;
+    box-shadow: inset 0px 0px 0px 4px #e4b34c;
 }
 
 .menu_section h2{
@@ -455,6 +469,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: inset 0px 0px 0px 4px #e4b34c;
 }
 .about_section article{
     padding: 40px;
@@ -485,7 +500,23 @@ main{
     background: #fff;
     border-radius: 50px;
     margin: -52px auto 0;
-    z-index: 99;
+    z-index: 3;
+    box-shadow: inset 0px 0px 0px 4px #e4b34c;
+}
+.booking_section::after{
+    display: block;
+    content: "";
+    position: absolute;
+    top: -23px;
+    right: calc(50% - 30px);
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    margin: -52px auto 0;
+    z-index: 4;
+}
+.booking_section h2{
+    margin-bottom:0;
 }
 .booking_section form{
     display: flex;
@@ -512,7 +543,7 @@ main{
     color: #495e57;
     padding-left: 10px;
     background-color: white;
-    font-family: 'Caviar Dreams Bold', sans-serif;
+    font-family: "Josefin Sans",sans-serif;   
 }
 .booking_section select{
     width: 208px;
@@ -532,14 +563,14 @@ main{
     border-color: #495e57;
     border-width: 1px;
     border-style: solid;
-    color: #495e57;
+    color: white;
     font-weight: bold;
     width: 196px;
     height: 46px;
     position: relative;
     overflow: hidden;
-    background-color: white;
-    font-family: 'Caviar Dreams Bold', sans-serif;
+    background-color: #2a3632;
+    font-family: "Josefin Sans",sans-serif;   
 }
 .booking_section button::before{
     position: absolute;
@@ -651,7 +682,7 @@ main{
 .address_container p{
    
     color:#495e57;
-    font-size: 1.25em;
+    font-size: 1.15em;
     line-height: 24px;
 }
 
@@ -705,13 +736,7 @@ footer p{
     header img {
         max-width: 230px;
     }
-    nav>ul{
-        background-color: rgba(0,0,0,0.9);
-    }
-    
-    main {
-        margin-top: -15px;
-    }
+  
     .banner_container h1 {
         font-size: 24px;
     }
