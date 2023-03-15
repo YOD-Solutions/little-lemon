@@ -648,7 +648,8 @@ main{
 }
 .gallery_container .slides{
     min-width:25%;
-    background-color: black;
+    background-color: #2a3632;
+    padding:0 5px;
     animation:gallery_slide 30s linear infinite;
 }
 
