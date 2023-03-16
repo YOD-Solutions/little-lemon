@@ -72,7 +72,16 @@ h2 {
     font-family: 'Caviar Dreams Bolder', sans-serif;
     text-transform: uppercase;
 }
-
+.heading_subtitle_gold{
+    color: #E4B34C;
+    font-family: 'Great Vibes', cursive;
+    font-size: 35px;
+    font-style: italic;
+    line-height: 1;
+    margin-bottom: 5px;
+    position: relative;
+    text-align: center;
+}
 header{
     display: flex;
     justify-content: center;
@@ -370,7 +379,7 @@ main{
 }
 
 
-.intro_section p{
+.intro_text{
     font-size: 1.25em;
 }
 
@@ -509,12 +518,8 @@ main{
 }
 .about_section{   
     background-color: #2a3632;
-    height: 430px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
     background-image: url(/img/bgfoodicon.png);
     position: relative;
     background-position: center;
@@ -529,19 +534,115 @@ main{
     height: 100%;
     background: rgba(42, 54, 50,0.8);
 }
+
+.about_section h2{
+    position: relative;
+    color: white;
+}
+
+.bio_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #fff;
+    position: relative;
+    margin: 0 40px;
+    padding:30px 0
+}
 .about_section article{
-    padding: 40px;
-    color: #495e57;    
+    color: #495e57;
     background-color: #fff;
     margin: 20px;
-    flex: 0 0 75%;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.about_section figure{
+    box-shadow: 0 0 18px rgb(40 40 40 / 12%);
+    border-radius: 2px;
+    position: relative;
+    margin-bottom: 0;
+    overflow: hidden;
+    text-align: center;
 }
 
-.about_section p{
-    font-size: 1.25em;
+.chefs_bio img{
+    max-width: 250px;
 }
 
+.about_section article:hover .chefs_bio img{
+    transform: scale(1.1);
+    transition: all 0.35s;
+}
+.chefs_bio figcaption{
+    text-align: center;
+    margin: 15px 0;
+}
+
+.about_section h5{
+    color: #282828;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: capitalize;
+    margin-bottom: 14px;
+}
+
+.about_section figure p{
+    color: #9b9b9b;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 0;
+}
+.about_section .member-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.about_section .member-overlay .member-hover {
+    border-radius: 2px;
+    background-color: rgba(34, 34, 34, 0.9);
+    width: 100%;
+    height: 100%;
+    transition: all 0.35s;
+    opacity: 0;
+}
+
+.about_section article:hover .member-hover {
+    opacity: 1;
+}
+
+.about_section  .pos-vertical-center {
+    position: relative;
+    top: 70%;
+    transform: perspective(1px) translateY(-30%);
+}
+
+.about_section .member-hover a {
+    color: #c59d5f;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    margin-right: 20px;
+}
+.about_section .member-desc {
+    padding: 15px;
+    font-size: 15px;
+    color: #9b9b9b;
+    margin-bottom: 0;
+}
+
+.about_section .member-desc p {
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+}
 .booking_section{
     padding:20px;
     margin-top:50px;
@@ -781,6 +882,9 @@ footer p{
 
 
 @media screen and (max-width:767px){
+    .heading_subtitle_gold{
+        font-size: 29px;
+    }
     .banner_container h1{
         font-size:30px;
     }
@@ -817,7 +921,7 @@ footer p{
     .intro_section h2,.booking_section h2,.about_section h2,.menu_section h2,.subscribe_section h2{
         font-size:24px;
     }
-    .intro_section p,.about_section p,.address_container p,.menu_section figcaption{
+    .intro_text,.about_section p,.address_container p,.menu_section figcaption{
         font-size:16px;
     }  
     #footer_logo{
