@@ -78,7 +78,7 @@ h2:after {
     width: 149px;
     height: 5px;
     margin: 15px auto;
-    background-image: url(/img/header_line.png);
+    background-image: url(/img/header_line_color.png);
 }
 .heading_subtitle_gold{
     color: #E4B34C;
