@@ -921,7 +921,7 @@ footer p{
     .intro_section h2,.booking_section h2,.about_section h2,.menu_section h2,.subscribe_section h2{
         font-size:24px;
     }
-    .intro_text,.about_section p,.address_container p,.menu_section figcaption{
+    .intro_text,.about_section figure p,.address_container p,.menu_section figcaption{
         font-size:16px;
     }  
     #footer_logo{
