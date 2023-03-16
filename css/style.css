@@ -173,7 +173,7 @@ main{
     align-items: stretch;
     position:relative;
     background: black;
-    margin-bottom: 75px;
+    margin-bottom: 50px;
     overflow:hidden;
     box-shadow: inset 0px 0px 0px 4px #e4b34c;
 }
@@ -528,10 +528,12 @@ main{
     background-color: #2a3632;
     padding-top: 50px;
     padding-bottom: 80px;
-    background-image: url(/img/bgfoodicon.png);
+    background-image: url(/img/background.jpg);
     position: relative;
     background-position: center;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 .about_section::before{
     content: '';
@@ -540,7 +542,7 @@ main{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(42, 54, 50,0.8);
+    background: rgba(27, 26, 26, 0.75);
 }
 
 .about_section h2{
