@@ -164,7 +164,7 @@ main{
 .banner_container>img{
     opacity: 0.5;
     width: 100%;
-    animation: imageslider 10s linear infinite;   
+    animation: imageslider 15s linear infinite;   
     object-fit: fill;
     height: auto;
 }
@@ -175,7 +175,7 @@ main{
     position: absolute;
     z-index:1;
     object-fit: fill;
-    animation: videoslider 10s linear infinite;
+    animation: videoslider 15s linear infinite;
   
 }
 
