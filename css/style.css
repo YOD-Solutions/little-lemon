@@ -72,6 +72,14 @@ h2 {
     font-family: 'Caviar Dreams Bolder', sans-serif;
     text-transform: uppercase;
 }
+h2:after {
+    display: block;
+    content: '';
+    width: 149px;
+    height: 5px;
+    margin: 15px auto;
+    background-image: url(/img/header_line.png);
+}
 .heading_subtitle_gold{
     color: #E4B34C;
     font-family: 'Great Vibes', cursive;
@@ -519,7 +527,7 @@ main{
 .about_section{   
     background-color: #2a3632;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
     background-image: url(/img/bgfoodicon.png);
     position: relative;
     background-position: center;
@@ -774,8 +782,21 @@ main{
 .subscribe_section{
     padding: 20px;
     margin-top: 50px;
+    position: relative;
 }
-
+section.subscribe_section:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: -25px;
+    right: calc(50% - 30px);
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50px;
+    margin: -52px auto 0;
+    z-index: 3;
+}
 .subscribe_section form{
     display: flex;
     flex-wrap: wrap;
