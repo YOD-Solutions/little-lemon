@@ -800,9 +800,6 @@ footer p{
 }
 
 @media screen and (max-width:576px){
-    header, nav, main, footer{
-        padding:0
-    }
     header img {
         max-width: 230px;
     }
