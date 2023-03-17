@@ -195,6 +195,7 @@ main{
 .pizza-1{
     top: -70px;
     right: -10px;
+    bottom: 30px;
     animation-duration: 1.5s;
     animation-delay: 1.3s;
 }
@@ -202,6 +203,8 @@ main{
 .pizza-2{
     top: -10px;
     left: 30px;
+    right: -120px;
+    max-width:350px;
     animation-duration: 1.8s;
     animation-delay: 1.8s;
 }
@@ -789,8 +792,124 @@ footer p{
     font-size: 13px;
 }
 
+@media (max-width:1199px){
+    .pizza-img{
+        max-width: 420px;
+    }
+    .pizza-1{
+        top: -60px;
+        right: 0px;
+        max-width: 140px;
+    }
+
+    .pizza-2{
+        top: -50px;
+    }
+    .pizza-3{
+        top: 40px;
+        max-width: 50px;
+        left: -10px;     
+    }
+
+    .pizza-4{
+        max-width: 60px;
+        bottom: -50px;
+        right: 210px;
+    }
+
+    .pizza-5{
+        max-width: 180px;  
+    }
+    .pizza-6{
+        bottom: 30px;
+        right: -20px;
+        max-width: 60px;
+    }
+    
+}
+
+@media (max-width:991px){
+    
+    .banner_text h1{
+        font-size: 70px;
+    }
+    .pizza-img{
+        max-width: 310px;
+    }
+    .pizza-1{
+        top: -50px;
+        right: -10px;
+        max-width: 110px;
+    }
+
+    .pizza-2{
+        max-width: 70px; 
+    }
+    .pizza-3{
+        top: 20px;
+        max-width: 35px;
+        left: 10px;     
+    }
+
+    .pizza-4{
+        max-width: 40px;
+        bottom: -40px;
+        right: 140px;
+    }
+
+    .pizza-5{
+        max-width: 130px;
+        bottom: -40px;
+        right: -10px;     
+    }
+    .pizza-6{
+        bottom: 40px;
+        right: -10px;
+        max-width: 40px;
+    }
+}
 
 @media screen and (max-width:767px){
+    
+    .banner_text h1{
+        font-size: 50px;
+    }
+    .pizza-img{
+        max-width: 160px;
+    }
+    .pizza-1{
+        top: 0px;
+        right: -30px;
+        max-width: 50px;
+    }
+
+    .pizza-2{
+        max-width: 30px;
+        top: -10px;
+        left: 0;    
+    }
+    .pizza-3{
+        top: 20px;
+        max-width: 18px;
+        left: -10px;      
+    }
+
+    .pizza-4{
+        max-width: 20px;
+        bottom: -10px;
+        right: 30px;
+    }
+
+    .pizza-5{
+        max-width: 60px;
+        bottom: -10px;
+        right: -25px;     
+    }
+    .pizza-6{
+        bottom: 30px;
+        right: -20px;
+        max-width: 20px;
+    }
     .heading_subtitle_gold{
         font-size: 29px;
     }    
@@ -811,9 +930,6 @@ footer p{
         max-width: 230px;
     }  
    
-    .banner_text h1{
-        font-size: 50px;
-    }
     .banner_text p{
         font-size:16px;
     }
