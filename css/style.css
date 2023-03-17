@@ -386,6 +386,7 @@ main{
     background-position: center;
     background-repeat: repeat;
     z-index: 1;
+    overflow-x: clip;
 
 }
 .new_banner_container::before{
