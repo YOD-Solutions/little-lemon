@@ -48,7 +48,7 @@
             </div>            
             
             <div class="all-img-banner">
-                <img src="/img/pizza-banner/pizza-banner-1.png" alt="banner" class="pizza-img">
+                <div class="pizza_holder"><img src="/img/pizza-banner/pizza-banner-1.png" alt="banner" class="pizza-img"></div>
                 <img src="/img/pizza-banner/pizza-1.png" alt="banner" class="pizza-it pizza-1">
                 <img src="/img/pizza-banner/pizza-2.png" alt="banner" class="pizza-it pizza-2">
                 <img src="/img/pizza-banner/pizza-3.png" alt="banner" class="pizza-it pizza-3">
@@ -202,7 +202,7 @@
             <form>
                 <div>
                     <div>
-                       
+                    
                         <select id="people_select">
                             <option value="1">1 person</option>
                             <option value="2" selected=""selected">2 people</option>
@@ -215,17 +215,16 @@
                         </select>
                     </div>
                     <div>
-                   
+                
                         <input type="text" id="date" name="date" onclick="(this.type='date')" onblur="if(!this.value)this.type='text'" placeholder="Date">                       
                     </div>
                     <div>
-                      
+                    
                         <input type="text" id="time" name="time" onclick="(this.type='time')" onblur="if(!this.value)this.type='text'" placeholder="Time">
                     </div>
                 </div>
                 <button type="submit" value="BOOK">BOOK</button>
             </form>
-                
         </section>
         <section id="about" class="about_section">
             <p class="heading_subtitle_gold">Ready to serve</p>

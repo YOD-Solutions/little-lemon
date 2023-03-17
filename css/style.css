@@ -198,10 +198,20 @@ main{
     
 }
 
-.pizza-img{
-    width: 100%;
+.pizza_holder{
     animation: pizza-img 1s linear;
     animation-delay: 1s;
+}
+
+.pizza-img{
+    width: 100%;    
+    animation: pizza_rotate 4s alternate infinite linear both;
+    -webkit-box-shadow: 10px 10px 57px 0px rgb(103 114 148 / 20%);
+    -moz-box-shadow: 10px 10px 57px 0px rgba(103, 114, 148, 0.2);
+    -ms-box-shadow: 10px 10px 57px 0px rgba(103, 114, 148, 0.2);
+    box-shadow: 10px 10px 57px 0px rgb(103 114 148 / 20%);
+    border-radius: 100%;
+
 }
 
 .pizza-1{
@@ -259,7 +269,14 @@ main{
         transform: none;
     }
 }
-
+@keyframes pizza_rotate {
+    0%{     
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(10deg);
+    }
+}
 @keyframes pizza-1 {
     0%{
         opacity: 0;
@@ -608,7 +625,7 @@ main{
     height: 46px;
     margin: 10px;
     font-size: 18px;
-    border-color: #495e57;
+    border-color: #E4B34C;
     border-width: 1px;
     border-style: solid;
     color: #495e57;
