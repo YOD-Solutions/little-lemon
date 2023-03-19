@@ -386,9 +386,24 @@ main{
     position: relative;
     background-position: center;
     background-repeat: repeat;
+    opacity: 0;
+    transition: opacity 1s;
+   
+}
+
+.menu_section.animate{
+    opacity: 1;
 }
 
 
+@keyframes slide-in {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+}
 .menu_section::before{
     content: '';
     position: absolute;
@@ -443,6 +458,8 @@ main{
     margin-bottom: 5px;
     color: white;
 }
+
+
 .about_section{   
     background-color: #2a3632;
     padding-top: 50px;
@@ -576,6 +593,7 @@ main{
     padding:20px;
     margin-top:50px;
     position: relative;
+
 }
 
 .booking_section::before{
