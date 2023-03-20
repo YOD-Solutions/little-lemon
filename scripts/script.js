@@ -2,13 +2,13 @@
 const banner_header = document.querySelector('.banner_text');
 const upper_header = document.querySelector('.upper_inner_header');
 const lower_header = document.querySelector('.lower_inner_header');
-const booking = document.querySelector('.menu_container');
+const menu = document.querySelector('.menu_container');
 
 const upper_headerBoxTopInt = upper_header.getBoundingClientRect().top;
 const lower_headerBoxTopInt = lower_header.getBoundingClientRect().bottom;
 const banner_headerTopInt = banner_header.getBoundingClientRect().bottom;
-const booking_BoxTopInt = booking.getBoundingClientRect().top;
-const booking_BoxBottomInt = booking.getBoundingClientRect().bottom;
+const booking_BoxTopInt = menu.getBoundingClientRect().top;
+const booking_BoxBottomInt = menu.getBoundingClientRect().bottom;
 
 
 
@@ -42,8 +42,8 @@ const observer = new IntersectionObserver(enteries => {
                         entry.target.style.transform =  'translate3d('+ currentPos +'px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)'; 
                     } 
                 }
-                if(entry.target == booking){
-                    headerBoxTop = entry.target.getBoundingClientRect().bottom;                            
+                if(entry.target == menu){
+                    headerBoxTop = entry.target.getBoundingClientRect().top;                            
                     currentPos =(windowHeight - headerBoxTop)/10;
 
                     if(windowHeight > headerBoxTop){                    
@@ -69,7 +69,7 @@ const observer = new IntersectionObserver(enteries => {
 observer.observe(banner_header);
 observer.observe(upper_header);
 observer.observe(lower_header);
-observer.observe(booking);
+observer.observe(menu);
 
 
 
