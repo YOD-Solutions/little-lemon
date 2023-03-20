@@ -290,19 +290,53 @@ main{
 
 
 .intro_section{
-    display: flex;
-    justify-content: center;
     margin: 50px 0;
     color: #495e57;
+    padding-bottom:90px;    
 }
 
-.intro_section div{
-    flex: 0 0 83.33%;
+.intro_container{
+    position: relative;
+    overflow-x: clip;
+}
+
+.intro_top{
+   width:83.33%;
+   margin:0 auto;
+   z-index: 1;
+   position: relative;
 }
 
 
 .intro_text{
     font-size: 1.25em;
+    text-align: center;
+}
+.upper_inner_header{
+    width: 2000%;
+    max-width: 2000%;
+    bottom: -52px;
+    position: absolute;
+    left: 164px;
+    transition: all 1s ease-out 0s;
+}
+.lower_inner_header{
+    width: 2000%;
+    max-width: 2000%;
+    bottom: -131px;
+    position: absolute;
+    left: 17px;
+    transition: all 1s ease-out 0s;
+}
+.upper_inner_header div,.lower_inner_header div{
+    color: #F5F5F5;
+    font-family: 'Caviar Dreams Bolder', sans-serif;
+    font-size: 80px;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    letter-spacing: -5px;
 }
 
 .small_container{
@@ -385,25 +419,9 @@ main{
     background-image: url(/img/bgfoodicon.png);
     position: relative;
     background-position: center;
-    background-repeat: repeat;
-    opacity: 0;
-    transition: opacity 1s;
-   
+    background-repeat: repeat;  
 }
 
-.menu_section.animate{
-    opacity: 1;
-}
-
-
-@keyframes slide-in {
-    from {
-      transform: translateX(-100%);
-    }
-    to {
-      transform: translateX(0);
-    }
-}
 .menu_section::before{
     content: '';
     position: absolute;
