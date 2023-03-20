@@ -1,21 +1,61 @@
 
+const banner_header = document.querySelector('.banner_text');
 const upper_header = document.querySelector('.upper_inner_header');
 const lower_header = document.querySelector('.lower_inner_header');
+const booking = document.querySelector('.menu_container');
 
 const upper_headerBoxTopInt = upper_header.getBoundingClientRect().top;
 const lower_headerBoxTopInt = lower_header.getBoundingClientRect().bottom;
+const banner_headerTopInt = banner_header.getBoundingClientRect().bottom;
+const booking_BoxTopInt = booking.getBoundingClientRect().top;
+const booking_BoxBottomInt = booking.getBoundingClientRect().bottom;
 
-const intro_upper_observer = new IntersectionObserver(enteries => {   
+
+
+const observer = new IntersectionObserver(enteries => {   
     enteries.forEach(entry =>{
         if(entry.isIntersecting){          
-            function animateOnScroll(){
-                const windowHeight = window.innerHeight;              
-                let upper_headerBoxTop = upper_header.getBoundingClientRect().top;
+            function animateOnScroll(){ 
+                let headerBoxTop = 0;
+                let currentPos = 0; 
+                windowHeight = window.innerHeight;
+                if(entry.target == banner_header){
+                    headerBoxTop = entry.target.getBoundingClientRect().bottom;
+                    let currentPos = headerBoxTop;
+                    if(currentPos>=0){                    
+                        //banner_header.style.transform =  'translateY(-'+ currentPos +'px)';
+                        let opac = Math.min(Math.max(currentPos/(banner_headerTopInt-15), 0), 1);
+                        entry.target.style.opacity = opac;
+                    }
+                }
+                if(entry.target == upper_header){
+                    headerBoxTop = entry.target.getBoundingClientRect().top;
+                    currentPos = 400*(upper_headerBoxTopInt - headerBoxTop -10)/(upper_headerBoxTopInt-10);
+                    if(currentPos>=0 && currentPos <= 400){                    
+                        entry.target.style.transform = 'translate3d(-'+ currentPos +'px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)';                   
+                    } 
+                }                 
+                if(entry.target == lower_header){
+                    headerBoxTop = entry.target.getBoundingClientRect().bottom;      
+                    currentPos = 400*(lower_headerBoxTopInt - headerBoxTop -10)/(lower_headerBoxTopInt-10);
+                    if(currentPos>=0 && currentPos <= 400){                    
+                        entry.target.style.transform =  'translate3d('+ currentPos +'px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)'; 
+                    } 
+                }
+                if(entry.target == booking){
+                    headerBoxTop = entry.target.getBoundingClientRect().bottom;                            
+                    currentPos =(windowHeight - headerBoxTop)/10;
+
+                    if(windowHeight > headerBoxTop){                    
+                        let children = entry.target.children;
+                        for(let i=0;i<children.length;i++){                        
+                            children[i].querySelector('img').style.transform = 'rotateZ('+ currentPos +'deg)';
+                        }
+                                    
+                    } 
+                }
            
-                let currentPos = 400*(upper_headerBoxTopInt - upper_headerBoxTop -10)/(upper_headerBoxTopInt-10);
-                if(currentPos>=0 && currentPos <= 400){                    
-                    upper_header.style.transform = 'translate3d(-'+ currentPos +'px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)';                   
-                 } 
+                
             }
             
             window.addEventListener('scroll',animateOnScroll);
@@ -26,28 +66,15 @@ const intro_upper_observer = new IntersectionObserver(enteries => {
     });
 });
 
-const intro_lower_observer = new IntersectionObserver(enteries => {   
-    enteries.forEach(entry =>{
-        if(entry.isIntersecting){          
-            function lowerAnimateOnScroll(){          
-                let lower_headerBoxTop = lower_header.getBoundingClientRect().bottom;      
-                let currentPos = 400*(lower_headerBoxTopInt - lower_headerBoxTop -10)/(lower_headerBoxTopInt-10);
-                if(currentPos>=0 && currentPos <= 400){                    
-                    lower_header.style.transform =  'translate3d('+ currentPos +'px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)'; 
-                 } 
-            }
-            
-            window.addEventListener('scroll',lowerAnimateOnScroll);
-           
-        } else{
-            window.removeEventListener('scroll',lowerAnimateOnScroll);          
-        }
-    });
-});
+observer.observe(banner_header);
+observer.observe(upper_header);
+observer.observe(lower_header);
+observer.observe(booking);
 
 
-intro_upper_observer.observe(upper_header);
-intro_lower_observer.observe(lower_header);
+
+
+
 
 
 
