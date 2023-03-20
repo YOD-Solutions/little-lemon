@@ -6,7 +6,7 @@ const menu = document.querySelector('.menu_container');
 
 const upper_headerBoxTopInt = upper_header.getBoundingClientRect().top;
 const lower_headerBoxTopInt = lower_header.getBoundingClientRect().bottom;
-const banner_headerTopInt = banner_header.getBoundingClientRect().bottom;
+const banner_headerTopInt = banner_header.getBoundingClientRect().top;
 const booking_BoxTopInt = menu.getBoundingClientRect().top;
 const booking_BoxBottomInt = menu.getBoundingClientRect().bottom;
 
@@ -14,18 +14,26 @@ const booking_BoxBottomInt = menu.getBoundingClientRect().bottom;
 
 const observer = new IntersectionObserver(enteries => {   
     enteries.forEach(entry =>{
-        if(entry.isIntersecting){          
+        if(entry.isIntersecting){
+            
+            if(entry.target == banner_header){
+                let title = entry.target.querySelectorAll('span.blast');
+                title.forEach((letter,index)=>{
+                    letter.style.transform = 'translateX(0px) translateY(0px) translateZ(0px)';
+                    letter.style["transition-delay"]=300+index*100 +"ms";
+                    letter.style["transition-duration"]="800ms";
+                    letter.style.opacity = "1";
+                })
+            }
+
             function animateOnScroll(){ 
                 let headerBoxTop = 0;
                 let currentPos = 0; 
                 windowHeight = window.innerHeight;
                 if(entry.target == banner_header){
-                    headerBoxTop = entry.target.getBoundingClientRect().bottom;
-                    let currentPos = headerBoxTop;
-                    if(currentPos>=0){                    
-                        //banner_header.style.transform =  'translateY(-'+ currentPos +'px)';
-                        let opac = Math.min(Math.max(currentPos/(banner_headerTopInt-15), 0), 1);
-                        entry.target.style.opacity = opac;
+                    headerBoxTop = entry.target.getBoundingClientRect().top;                   
+                    if(headerBoxTop>=0){                       
+                        entry.target.style.opacity = Math.abs(headerBoxTop/banner_headerTopInt); ;
                     }
                 }
                 if(entry.target == upper_header){
@@ -51,7 +59,14 @@ const observer = new IntersectionObserver(enteries => {
                         for(let i=0;i<children.length;i++){                        
                             children[i].querySelector('img').style.transform = 'rotateZ('+ currentPos +'deg)';
                         }
-                                    
+                        let parent = entry.target.parentElement;
+                        let title = parent.querySelectorAll('span.blast');
+                        title.forEach((letter,index) =>{
+                            letter.style.transform = 'translateX(0px) translateY(0px) translateZ(0px)';
+                            letter.style["transition-delay"]=300+index*100 +"ms";
+                            letter.style["transition-duration"]="800ms";
+                            letter.style.opacity = "1";
+                        })                               
                     } 
                 }
            

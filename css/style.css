@@ -176,9 +176,16 @@ main{
     color: white;
     font-size: 80px;
     font-family: 'Metropolis 1920 Regular', sans-serif;
+    
 }
-
 .banner_text h1 span{
+    display: inline-block;
+    transform: translateX(101%) translateY(0) translateZ(0);
+    transition: all 800ms ease;
+    opacity: 0;
+    transition-delay: 1500ms;
+}
+.banner_text h1 span.colored{
     color:#E4B34C;
     
 }
@@ -436,6 +443,15 @@ main{
 .menu_section h2{
     color: white;
     position: relative;
+    
+}
+
+.menu_section h2 span{
+    display: inline-block;
+    transform: translateX(101%) translateY(0) translateZ(0);
+    transition: all 800ms ease;
+    opacity: 0;
+    transition-delay: 1900ms;
 }
 
 .menu_container{
