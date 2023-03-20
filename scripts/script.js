@@ -14,7 +14,7 @@ const intro_upper_observer = new IntersectionObserver(enteries => {
            
                 let currentPos = 400*(upper_headerBoxTopInt - upper_headerBoxTop -10)/(upper_headerBoxTopInt-10);
                 if(currentPos>=0 && currentPos <= 400){                    
-                    upper_header.style.transform = 'translate3d('+ currentPos +'px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)';                   
+                    upper_header.style.transform = 'translate3d(-'+ currentPos +'px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)';                   
                  } 
             }
             
@@ -33,7 +33,7 @@ const intro_lower_observer = new IntersectionObserver(enteries => {
                 let lower_headerBoxTop = lower_header.getBoundingClientRect().bottom;      
                 let currentPos = 400*(lower_headerBoxTopInt - lower_headerBoxTop -10)/(lower_headerBoxTopInt-10);
                 if(currentPos>=0 && currentPos <= 400){                    
-                    lower_header.style.transform =  'translate3d(-'+ currentPos +'px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)'; 
+                    lower_header.style.transform =  'translate3d('+ currentPos +'px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)'; 
                  } 
             }
             
