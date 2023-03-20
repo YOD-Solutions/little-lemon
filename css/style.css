@@ -325,7 +325,7 @@ main{
     max-width: 2000%;
     bottom: -131px;
     position: absolute;
-    left: 17px;
+    left: -350px;
     transition: all 1s ease-out 0s;
 }
 .upper_inner_header div,.lower_inner_header div{
