@@ -217,7 +217,7 @@ nav a:hover{
 }
 
 .small_menu_list_container{
-    margin-top:35px;
+    margin-top:20px;
 }
 .small_menu_list li{
     list-style-type: none;
@@ -231,11 +231,11 @@ nav a:hover{
     color: white;
     text-decoration: none;
     font-family: 'Caviar Dreams Bolder', sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     letter-spacing: 0px;
     text-transform: uppercase;
     display: block;
-    line-height: 1.8;
+    line-height: 2.2;
     word-wrap: break-word;
 }
 
