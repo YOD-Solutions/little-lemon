@@ -125,7 +125,7 @@ h1:after,h2:after {
     transition: all .5s cubic-bezier(.165, .84, .44, 1);
 }
 
-header{
+.large_header_container{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -133,11 +133,11 @@ header{
    
 }
 
-header .logo_container{
+.large_header_container .logo_container{
     position:relative
 }
 
-header img{
+.large_header_container img{
     height: auto;
     max-width:250px;
 }
@@ -198,8 +198,7 @@ nav a:hover{
     width: 280px;
     padding: 35px 30px 35px 30px;
     box-sizing: border-box;
-    background: #111;
-    background-color: rgb(42, 54, 50);
+    background-color: #111;
     position: fixed;
     top: 0;
     overflow-x: hidden;
@@ -225,6 +224,22 @@ nav a:hover{
     line-height: 1.8;
     word-wrap: break-word;
 }
+
+.menu_additional .additional_title{
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.menu_additional h3{
+    color: white;
+    font-size: 13px;
+    text-align: left;
+    text-transform: uppercase;
+}
+.menu_additional p,.menu_additional a{
+    color: #777777;
+    font-size: 15px;
+}
+    
 #overlay_background{
     opacity: 0;
     visibility: hidden;

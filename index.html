@@ -26,40 +26,61 @@
 
 </head>
 <body class="restore"> 
-    <div class="large_screen_header init">
-        <header>
-            <div class="logo_container">
-                <img src="/img/little_lemon_logo.png" width="2000" height="546" alt="Little Lemon Logo">
+    <header>
+        <div class="large_screen_header init">
+            <div class="large_header_container">
+                <div class="logo_container">
+                    <img src="/img/little_lemon_logo.png" width="2000" height="546" alt="Little Lemon Logo">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#book">Book</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </nav>                
             </div>
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#book">Book</a></li>
-                    <li><a href="#about">About</a></li>
-                </ul>
-            </nav>                
-        </header>
-        
-    </div>
-    <div class="small_menu_list">
-        <ul>
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#book">Book</a></li>
-            <li><a href="#about">About</a></li>
-        </ul>
-    </div>  
-    <section class="small_screen_header init">
-        <div class="small_menu_bar">
-            <div class="logo_container">
-                <img src="/img/little_lemon_logo.png" width="2000" height="546" alt="Little Lemon Logo">
-            </div>
-            <div class="menu_toggle"><i class="fa fa-bars"></i></div>
+            
         </div>
-              
+        
+        <div class="small_screen_header init">
+            <div class="small_menu_bar">
+                <div class="logo_container">
+                    <img src="/img/little_lemon_logo.png" width="2000" height="546" alt="Little Lemon Logo">
+                </div>
+                <div class="menu_toggle"><i class="fa fa-bars"></i></div>
+            </div>     
+        </div>
 
-    </section>
+        <div class="small_menu_list">
+            <ul>
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#book">Book</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div class="menu_additional">
+                <div class="additional_title">
+                    <h3>Location</h3>
+                </div>
+                <div>
+                    <p><a href="tel:123456789900">+12 345 678 9900</a></p>
+                    <p><a href="mailto:info@littlelemon.com">info@littlelemon.com</a></p>
+                    <p>5301 S Hyde Park Blvd, Chicago, IL 60615</p>
+                </div>
+                <div class="additional_title">
+                    <h3>Opening Hours</h3>
+                </div>
+                <div>  
+                    <p>Tuesday-Thursday: 12am-9pm</p>
+                    <p>Friday-Sunday: 12am-11pm</p>
+                    <p>Monday: Closed</p>
+                </div>
+            </div>
+        </div>
+
+    </header>
     
     <main> 
         <section class="new_banner_container">
@@ -128,7 +149,7 @@
             </article>          
         </section>
 
-        <section id="menu" class="menu_section">
+        <section class="menu_section">
             <p class="heading_subtitle_gold">Taste the best</p>
             <h2>
                 <span class="blast">D</span><span class="blast">I</span><span class="blast">S</span><span class="blast">C</span><span class="blast">O</span><span class="blast">V</span><span class="blast">E</span><span class="blast">R</span><span class="blast">&nbsp;</span><span class="blast">O</span><span class="blast">U</span><span class="blast">R</span><span class="blast">&nbsp;</span><span class="blast">M</span><span class="blast">E</span><span class="blast">N</span><span class="blast">U</span>
@@ -236,7 +257,7 @@
             
         </section>
         
-        <section id="book" class="booking_section">
+        <section class="booking_section">
             <p class="heading_subtitle_gold">Online Booking</p>
             <h2>Reservation</h2>
             <form>
@@ -266,7 +287,7 @@
                 <button type="submit" value="BOOK">BOOK</button>
             </form>
         </section>
-        <section id="about" class="about_section">
+        <section class="about_section">
             <p class="heading_subtitle_gold">Ready to serve</p>
             <h2>Talented Chefs</h2>
             <div class="bio_container">
