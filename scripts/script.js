@@ -106,6 +106,7 @@ observer.observe(main);
 const menuToggle = document.querySelector(".menu_toggle");
 const overlayBackground = document.querySelector("#overlay_background");
 const menuAnchor = document.querySelectorAll(".small_menu_list li a");
+const smallMenuClose = document.querySelector('#close_small_menu');
 
 menuToggle.addEventListener("click",event =>{
     document.querySelector("body").classList.toggle("toggle_menu");
@@ -117,6 +118,10 @@ overlayBackground.addEventListener("click",()=>{
     document.querySelector("body").classList.toggle("restore");
 });
 
+smallMenuClose.addEventListener("click",()=>{
+    document.querySelector("body").classList.toggle("toggle_menu");
+    document.querySelector("body").classList.toggle("restore");
+})
 menuAnchor.forEach(anchor =>{
     anchor.addEventListener("click",()=>{
     document.querySelector("body").classList.toggle("toggle_menu");    

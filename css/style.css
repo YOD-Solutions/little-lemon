@@ -205,6 +205,20 @@ nav a:hover{
     height: 100%;
     z-index: 6;
 }
+
+#close_small_menu{
+    font-size: 22px;
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    top: 28px;
+    opacity: 0.5;
+    color: white;
+}
+
+.small_menu_list_container{
+    margin-top:35px;
+}
 .small_menu_list li{
     list-style-type: none;
     
