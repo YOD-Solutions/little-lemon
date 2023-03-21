@@ -50,9 +50,10 @@ const observer = new IntersectionObserver(enteries => {
 
                     if(windowHeight > headerBoxTop){                    
                         let children = entry.target.children;
-                        for(let i=0;i<children.length;i++){                        
+                       /* for(let i=0;i<children.length;i++){                        
                             children[i].querySelector('img').style.transform = 'rotateZ('+ currentPos +'deg)';
                         }
+                        */
                         let parent = entry.target.parentElement;
                         let title = parent.querySelectorAll('span.blast');
                         title.forEach((letter,index) =>{
