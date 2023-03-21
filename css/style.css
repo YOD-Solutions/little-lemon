@@ -274,6 +274,7 @@ main{
     background-image: url(/img/bgfoodicon1.jpg);
     background-position: center;
     background-repeat: repeat;
+    background-size: cover;
 
 }
 .new_banner_container::before{
@@ -283,7 +284,7 @@ main{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(42, 54, 50,0.8);
+    background: rgba(42, 54, 50,0.1);
     background-image: linear-gradient(180deg, #000000 0%, #FFFFFF00 100%);
 }
 
