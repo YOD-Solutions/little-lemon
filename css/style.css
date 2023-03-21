@@ -238,7 +238,9 @@ nav a:hover{
     line-height: 2.2;
     word-wrap: break-word;
 }
-
+.menu_additional{
+    padding-top:30px;
+}
 .menu_additional .additional_title{
     margin-top: 30px;
     margin-bottom: 15px;
