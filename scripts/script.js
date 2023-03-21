@@ -29,13 +29,7 @@ const observer = new IntersectionObserver(enteries => {
             function animateOnScroll(){ 
                 let headerBoxTop = 0;
                 let currentPos = 0; 
-                windowHeight = window.innerHeight;
-                if(entry.target == banner_header){
-                    headerBoxTop = entry.target.getBoundingClientRect().top;                   
-                    if(headerBoxTop>=0){                       
-                        entry.target.style.opacity = Math.abs(headerBoxTop/banner_headerTopInt); ;
-                    }
-                }
+                let windowHeight = window.innerHeight;                
                 if(entry.target == upper_header){
                     headerBoxTop = entry.target.getBoundingClientRect().top;
                     currentPos = 400*(upper_headerBoxTopInt - headerBoxTop -10)/(upper_headerBoxTopInt-10);
@@ -85,6 +79,35 @@ observer.observe(banner_header);
 observer.observe(upper_header);
 observer.observe(lower_header);
 observer.observe(menu);
+
+//---- Small Screen Menu toggle click event---------
+
+const menuToggle = document.querySelector(".menu_toggle");
+const overlayBackground = document.querySelector("#overlay_background");
+const menuAnchor = document.querySelectorAll(".small_menu_list li a");
+
+menuToggle.addEventListener("click",event =>{
+    document.querySelector("body").classList.toggle("toggle_menu");
+    document.querySelector("body").classList.toggle("restore");
+});
+
+overlayBackground.addEventListener("click",()=>{
+    document.querySelector("body").classList.toggle("toggle_menu");
+    document.querySelector("body").classList.toggle("restore");
+});
+
+menuAnchor.forEach(anchor =>{
+    anchor.addEventListener("click",()=>{
+    document.querySelector("body").classList.toggle("toggle_menu");    
+    anchor.parentElement.classList.add("active");
+
+    const siblings = n => [...n.parentElement.children].filter(c=>c.nodeType == 1 && c!=n);    
+    siblings(anchor.parentElement).forEach(li=>{
+        li.classList.remove("active");
+    })
+   
+});
+});
 
 
 
