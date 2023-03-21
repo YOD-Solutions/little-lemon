@@ -46,6 +46,13 @@
     src: url('/fonts/Caviar Dreams/CaviarDreams_BoldItalic.woff') format('woff');
 }
 
+
+@font-face {
+    font-family: 'arion_typeface_altregular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/fonts/Arion/arion_typeface_alt-webfont-3.woff') format('woff');
+}
 html{
     font-size:14px;
 }
@@ -105,10 +112,11 @@ h1:after,h2:after {
     left: 0;
     z-index: 5;
     margin-bottom: 0px;
-    background-color: rgba(25,25,25,.3);    
+    background-color: rgba(25,25,25,.5);    
     box-shadow: 0px 10px 60px rgb(0 0 0 / 0%);
     height: max-content;
     transition: all .5s cubic-bezier(.165, .84, .44, 1);
+    backdrop-filter: blur(1px);
 }
 .large_screen_header.show{
     box-shadow: 0px 10px 60px rgb(0 0 0 / 10%);
@@ -260,7 +268,7 @@ main{
     align-items: center;
     flex-wrap: wrap;
     background-color: rgb(42, 54, 50);
-    padding-top:50px;   
+    padding-top:125px;   
     position: relative;    
     overflow-x: clip;
     background-image: url(/img/bgfoodicon1.jpg);
@@ -445,10 +453,18 @@ main{
     max-width: 800px;
 }
 
-
 .intro_text{
     font-size: 1.25em;
     text-align: center;
+}
+.intro_signature{
+    text-align: center;
+    padding-top: 15px;
+    color: #000000;
+    font-size: 50px;
+    font-weight: 400;
+    text-transform: none;
+    font-family: "arion_typeface_altregular", Sans-serif
 }
 .upper_inner_header{
     width: 2000%;
