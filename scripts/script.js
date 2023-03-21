@@ -3,12 +3,14 @@ const banner_header = document.querySelector('.banner_text');
 const upper_header = document.querySelector('.upper_inner_header');
 const lower_header = document.querySelector('.lower_inner_header');
 const menu = document.querySelector('.menu_container');
+const main = document.querySelector("main");
 
 const upper_headerBoxTopInt = upper_header.getBoundingClientRect().top;
 const lower_headerBoxTopInt = lower_header.getBoundingClientRect().bottom;
 const banner_headerTopInt = banner_header.getBoundingClientRect().top;
 const booking_BoxTopInt = menu.getBoundingClientRect().top;
 const booking_BoxBottomInt = menu.getBoundingClientRect().bottom;
+const main_BoxTopInt = main.getBoundingClientRect().top;
 
 
 
@@ -27,9 +29,26 @@ const observer = new IntersectionObserver(enteries => {
             }
 
             function animateOnScroll(){ 
+
                 let headerBoxTop = 0;
                 let currentPos = 0; 
-                let windowHeight = window.innerHeight;                
+                let windowHeight = window.innerHeight; 
+                
+                if(entry.target == main){
+                    let small_screen = document.querySelector('.small_screen_header');
+                    let large_screen = document.querySelector('.large_screen_header');
+                    let main_BoxTop = main.getBoundingClientRect().top;                 
+                    if(main_BoxTop < -83){
+                        small_screen.classList.add("show");
+                        large_screen.classList.add("show");
+                    }else if(main_BoxTop < -100){
+                        large_screen.classList.add("show");
+                    }else{
+                        small_screen.classList.remove("show");
+                        large_screen.classList.remove("show");
+                    }
+                    
+                }               
                 if(entry.target == upper_header){
                     headerBoxTop = entry.target.getBoundingClientRect().top;
                     currentPos = 400*(upper_headerBoxTopInt - headerBoxTop -10)/(upper_headerBoxTopInt-10);
@@ -80,6 +99,7 @@ observer.observe(banner_header);
 observer.observe(upper_header);
 observer.observe(lower_header);
 observer.observe(menu);
+observer.observe(main);
 
 //---- Small Screen Menu toggle click event---------
 
