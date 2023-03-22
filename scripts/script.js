@@ -80,12 +80,16 @@ observer.observe(main);
 
 const menuToggle = document.querySelector(".menu_toggle");
 const overlayBackground = document.querySelector("#overlay_background");
+const smallMenuList = document.querySelector(".small_menu_list");
+const smallScreenHeader = document.querySelector(".small_screen_header");
 const menuAnchor = document.querySelectorAll(".small_menu_list li a");
 const smallMenuClose = document.querySelector('#close_small_menu');
 
-menuToggle.addEventListener("click",event =>{
+
+menuToggle.addEventListener("click",() =>{
     document.querySelector("body").classList.toggle("toggle_menu");
     document.querySelector("body").classList.toggle("restore");
+    smallMenuList.style.display="block";
 });
 
 overlayBackground.addEventListener("click",()=>{

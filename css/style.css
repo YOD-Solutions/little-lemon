@@ -1225,7 +1225,7 @@ footer p{
         display: none;
     }
     .small_screen_header.init{
-        display: block;
+        display: block!important;
         width: 100%;
         float: left;
         position: fixed;
