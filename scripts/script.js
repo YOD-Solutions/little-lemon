@@ -109,11 +109,12 @@ menuAnchor.forEach(anchor =>{
    
 });
 });
-//-------- preloader remove ------------
-document.addEventListener("readystatechange", function(){
+
+ //-------- preloader remove ------------
+
+ window.addEventListener("load", function(){
     document.querySelector('.page-loader').style.display='none';
 });
-
 
 
 
