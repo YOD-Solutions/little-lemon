@@ -964,7 +964,7 @@ main{
     height: 46px;
     margin: 10px;
     font-size: 18px;
-    color: #ababab;
+    color: white;
     padding-left: 10px;
     background-color: transparent;
     font-family: "Josefin Sans",sans-serif;
@@ -979,8 +979,12 @@ input::-webkit-calendar-picker-indicator{
 .booking_section select{
     width: 208px;
 }
+.booking_section option{
+    color: #495e57;
+}
+
 .booking_section input::placeholder{
-    color: #ababab;
+    color: white;
 }
 
 .booking_section input:focus-visible{
