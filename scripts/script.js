@@ -2,17 +2,12 @@
 const banner_header = document.querySelector('.banner_text');
 const upper_header = document.querySelector('.upper_inner_header');
 const lower_header = document.querySelector('.lower_inner_header');
-const menu = document.querySelector('.menu_container');
 const main = document.querySelector("main");
 
 const upper_headerBoxTopInt = upper_header.getBoundingClientRect().top;
 const lower_headerBoxTopInt = lower_header.getBoundingClientRect().bottom;
 const banner_headerTopInt = banner_header.getBoundingClientRect().top;
-const booking_BoxTopInt = menu.getBoundingClientRect().top;
-const booking_BoxBottomInt = menu.getBoundingClientRect().bottom;
 const main_BoxTopInt = main.getBoundingClientRect().top;
-
-
 
 const observer = new IntersectionObserver(enteries => {   
     enteries.forEach(entry =>{
@@ -63,26 +58,7 @@ const observer = new IntersectionObserver(enteries => {
                         entry.target.style.transform =  'translate3d('+ currentPos +'px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1)'; 
                     } 
                 }
-                if(entry.target == menu){
-                    headerBoxTop = entry.target.getBoundingClientRect().top;                            
-                    currentPos =(windowHeight - headerBoxTop)/10;
-
-                    if(windowHeight > headerBoxTop){                    
-                        let children = entry.target.children;
-                       /* for(let i=0;i<children.length;i++){                        
-                            children[i].querySelector('img').style.transform = 'rotateZ('+ currentPos +'deg)';
-                        }
-                        */
-                        let parent = entry.target.parentElement;
-                        let title = parent.querySelectorAll('span.blast');
-                        title.forEach((letter,index) =>{
-                            letter.style.transform = 'translateX(0px) translateY(0px) translateZ(0px)';
-                            letter.style["transition-delay"]=300+index*100 +"ms";
-                            letter.style["transition-duration"]="800ms";
-                            letter.style.opacity = "1";
-                        })                               
-                    } 
-                }
+                
            
                 
             }
@@ -98,7 +74,6 @@ const observer = new IntersectionObserver(enteries => {
 observer.observe(banner_header);
 observer.observe(upper_header);
 observer.observe(lower_header);
-observer.observe(menu);
 observer.observe(main);
 
 //---- Small Screen Menu toggle click event---------
