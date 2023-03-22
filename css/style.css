@@ -218,7 +218,7 @@ nav a:hover{
     background-color: #111;
     position: fixed;
     top: 0;
-    overflow-x: hidden;
+    overflow: auto;
     height: 100%;
     z-index: 6;
 }
@@ -309,6 +309,9 @@ nav a:hover{
     height: 100%;
     cursor: pointer;
     transition: all 0.5s cubic-bezier(.645,.045,.355,1);
+}
+body.toggle_menu{
+    overflow: hidden;
 }
 body.toggle_menu .small_menu_list{
     transform: translate(0,0);
