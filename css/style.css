@@ -222,17 +222,41 @@ nav a:hover{
     height: 100%;
     z-index: 6;
 }
-
 #close_small_menu{
-    font-size: 22px;
-    display: inline-block;
     position: absolute;
-    right: 30px;
-    top: 28px;
-    opacity: 0.5;
-    color: white;
+    right: 16px;
+    top: 16px;
+    width: 32px;
+    height: 32px;
+ 
 }
 
+#close_small_menu:hover{
+    opacity: 0.75;
+    background-color: #202933;
+}
+
+#close_small_menu::before,#close_small_menu::after{
+    position: absolute;
+    content: ' ';
+    height: 16px;
+    width: 2px;
+    background-color: #fff;
+    right: 16px;
+    top: 8px;
+    transition: all ease .4s;
+    
+}
+#close_small_menu::before{
+    transform: rotate(45deg);
+}
+#close_small_menu::after{
+    transform: rotate(-45deg);
+}
+#close_small_menu:hover::before,#close_small_menu:hover::after{
+    transform: rotate(90deg);
+    transition: all ease .4s;
+}
 .small_menu_list_container{
     margin-top:20px;
 }
@@ -307,7 +331,6 @@ body.toggle_menu #overlay_background{
 }
 main{
     background-color: white;
-    box-shadow: 0 3px 5px rgb(42 54 50);
 }
 
 .new_banner_container{
