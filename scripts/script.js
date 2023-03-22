@@ -89,7 +89,6 @@ const smallMenuClose = document.querySelector('#close_small_menu');
 menuToggle.addEventListener("click",() =>{
     document.querySelector("body").classList.toggle("toggle_menu");
     document.querySelector("body").classList.toggle("restore");
-    smallMenuList.style.display="block";
 });
 
 overlayBackground.addEventListener("click",()=>{

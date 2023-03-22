@@ -208,6 +208,7 @@ nav a:hover{
 }
 
 .small_menu_list{
+    display: none;
     right: 0;
     transition: all 0.5s cubic-bezier(.645,.045,.355,1);
     transform: translate(400px,0);
@@ -1225,7 +1226,7 @@ footer p{
         display: none;
     }
     .small_screen_header.init{
-        display: block!important;
+        display: block;
         width: 100%;
         float: left;
         position: fixed;
@@ -1235,6 +1236,9 @@ footer p{
         background-color: rgba(25,25,25,.2);
         box-shadow: 0px 10px 60px rgb(0 0 0 / 0%);
         height: max-content;  
+    }
+    .small_menu_list.init{
+        display: block;
     }
 
     .small_screen_header.show{
