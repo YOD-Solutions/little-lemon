@@ -111,9 +111,8 @@ menuAnchor.forEach(anchor =>{
 });
 
  //-------- preloader remove ------------
-
+/*
  window.addEventListener("load", function(){
-    
     setTimeout(()=> {        
      let fadeTarget = document.querySelector('.page-loader');
      fadeTarget.style.transition = "opacity 1s ease";    
@@ -132,7 +131,7 @@ menuAnchor.forEach(anchor =>{
     
 });
 
-
+*/
 
 
 
