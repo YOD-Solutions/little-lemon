@@ -1276,6 +1276,10 @@ footer p{
     .small_container figcaption{ 
         font-size:15px;
     }
+    .menu_container h3{
+        font-size:20px;
+        margin-bottom: 12px;
+    }
 
 
 
