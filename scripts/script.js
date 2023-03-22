@@ -113,7 +113,23 @@ menuAnchor.forEach(anchor =>{
  //-------- preloader remove ------------
 
  window.addEventListener("load", function(){
-    document.querySelector('.page-loader').style.display='none';
+    
+    setTimeout(()=> {        
+     let fadeTarget = document.querySelector('.page-loader');
+     fadeTarget.style.transition = "opacity 1s ease";    
+     let fadeEffect = setInterval(function () {
+         if (!fadeTarget.style.opacity) {
+             fadeTarget.style.opacity = 1;
+         }
+         if (fadeTarget.style.opacity > 0) {
+             fadeTarget.style.opacity -= 0.25;
+         } else {
+             clearInterval(fadeEffect);
+         }
+     }, 200);
+     },1000);
+     
+    
 });
 
 
