@@ -839,8 +839,13 @@ main{
 }
 .booking_section{
     padding:20px;
+    padding-bottom: 60px;
     margin-top:50px;
     position: relative;
+    background-image: url(/img/body-bg.jpg);
+    position: relative;
+    background-position: center;
+    background-repeat: repeat;
 
 }
 
@@ -873,12 +878,39 @@ main{
 .booking_section h2{
     margin-bottom:0;
 }
+
+.booking_container{
+    background-image: url(/img/banner-2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 50px 60px;
+    position: relative;
+}
+.booking_container::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(42, 54, 50,0.4);
+}
+.booking_form{
+    padding: 50px 30px;
+    position: relative;
+}
+
 .booking_section form{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 30px 15px;
+    padding: 50px 15px;
+    background-color: rgba(42, 54, 50,0.9);
+    
 }
 .booking_section form>div{
     display:flex;
@@ -892,19 +924,23 @@ main{
     height: 46px;
     margin: 10px;
     font-size: 18px;
-    border-color: #E4B34C;
-    border-width: 1px;
-    border-style: solid;
-    color: #495e57;
+    color: #ababab;
     padding-left: 10px;
-    background-color: white;
-    font-family: "Josefin Sans",sans-serif;   
+    background-color: transparent;
+    font-family: "Josefin Sans",sans-serif;
+    border: none;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: #FFFFFF73;
+}
+input::-webkit-calendar-picker-indicator{
+    filter: invert(1);
 }
 .booking_section select{
     width: 208px;
 }
 .booking_section input::placeholder{
-    color: #495e57;
+    color: #ababab;
 }
 
 .booking_section input:focus-visible{
@@ -915,9 +951,7 @@ main{
     margin-top: 15px;
     padding: 10px 15px;
     font-size: 16px; 
-    border-color: #E4B34C;
-    border-width: 1px;
-    border-style: solid;
+    border:none;
     color: white;
     width: 196px;
     height: 46px;

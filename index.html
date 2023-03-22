@@ -181,13 +181,13 @@
                         <p class="menu_price">$5.45</p>                        
                     </article>
                     <article class="swiper-slide">                        
-                        <img src="/img/pasta/casunziei.png" width="600" height="600" alt="Casunziei">
+                        <img src="/img/pasta/casunziei1.png" width="554" height="555" alt="Casunziei">
                         <h3>Casunziei</h3>
                         <p class="menu_description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                         <p class="menu_price">$10.60</p>                        
                     </article> 
                     <article class="swiper-slide">                        
-                        <img src="/img/pizza/diablo.gif" width="600" height="600" alt="Diablo">
+                        <img src="/img/pizza/diablo.png" width="527" height="528" alt="Diablo">
                         <h3>Diablo</h3>
                         <p class="menu_description">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                         <p class="menu_price">$1.85</p>                        
@@ -223,32 +223,37 @@
         <section class="booking_section">
             <p class="heading_subtitle_gold">Online Booking</p>
             <h2>Reservation</h2>
-            <form>
-                <div>
-                    <div>
-                    
-                        <select id="people_select">
-                            <option value="1">1 person</option>
-                            <option value="2" selected=""selected">2 people</option>
-                            <option value="3">3 people</option>
-                            <option value="4">4 people</option>
-                            <option value="5">5 people</option>
-                            <option value="6">6 people</option>
-                            <option value="7">7 people</option>
-                            <option value="8">8 people</option>
-                        </select>
-                    </div>
-                    <div>
-                
-                        <input type="text" id="date" name="date" onclick="(this.type='date')" onblur="if(!this.value)this.type='text'" placeholder="Date">                       
-                    </div>
-                    <div>
-                    
-                        <input type="text" id="time" name="time" onclick="(this.type='time')" onblur="if(!this.value)this.type='text'" placeholder="Time">
-                    </div>
+            <div class="booking_container">
+                <div class="booking_form">
+                    <form>
+                        <div>
+                            <div>
+                            
+                                <select id="people_select">
+                                    <option value="1">1 person</option>
+                                    <option value="2" selected=""selected">2 people</option>
+                                    <option value="3">3 people</option>
+                                    <option value="4">4 people</option>
+                                    <option value="5">5 people</option>
+                                    <option value="6">6 people</option>
+                                    <option value="7">7 people</option>
+                                    <option value="8">8 people</option>
+                                </select>
+                            </div>
+                            <div>
+                        
+                                <input type="text" id="date" name="date" onclick="(this.type='date')" onblur="if(!this.value)this.type='text'" placeholder="Date">                       
+                            </div>
+                            <div>
+                            
+                                <input type="text" id="time" name="time" onclick="(this.type='time')" onblur="if(!this.value)this.type='text'" placeholder="Time">
+                            </div>
+                        </div>
+                        <button type="submit" value="BOOK">BOOK</button>
+                    </form>
                 </div>
-                <button type="submit" value="BOOK">BOOK</button>
-            </form>
+            </div>
+            
         </section>
         <section class="about_section">
             <p class="heading_subtitle_gold">Ready to serve</p>
