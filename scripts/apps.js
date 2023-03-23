@@ -38,7 +38,7 @@ const menu_swiper = new Swiper('.menu_swiper', {
         prevEl: ".menu_section .swiper-button-prev",
     },
     pagination: {
-        el: menu_section.querySelector(".swiper-pagination"),
+        el: menu_section.querySelector(".menu_section .swiper-pagination"),
         clickable: true,
         renderBullet: function (index, className) {
           return `<div class=${className}>
@@ -90,7 +90,7 @@ const about_swiper = new Swiper('.bio_swiper', {
         prevEl: ".about_section .swiper-button-prev",
     },
     pagination: {
-        el: about_section.querySelector(".swiper-pagination"),
+        el: about_section.querySelector(".about_section .swiper-pagination"),
         clickable: true,
         renderBullet: function (index, className) {
           return `<div class=${className}>
@@ -118,6 +118,50 @@ const about_swiper = new Swiper('.bio_swiper', {
         1200: {
           slidesPerView: 4,
           spaceBetween: 30
+        }
+    },
+
+  });
+
+  //--------- initialize about section slider ---
+
+const gallery_section = document.querySelector("section.gallery_section");
+
+const gallery_swiper = new Swiper('.gallery_swiper', {
+    speed: 400,
+    spaceBetween: spaceBetween,
+    slidesPerView:slidesPerView,    
+    freeMode: true,
+    loop: true,
+    lazyLoading: true,
+    keyboard: {
+      enabled: true
+    },
+    watchSlidesProgress: true,
+    navigation: {
+        nextEl: ".gallery_section .swiper-button-next",
+        prevEl: ".gallery_section .swiper-button-prev",
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 2,
+            spaceBetween: 0
+          },
+        576: {
+            slidesPerView: 2,
+            spaceBetween: 0
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 0
+        },
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 0
+          },
+        1200: {
+          slidesPerView: 5,
+          spaceBetween: 0
         }
     },
 

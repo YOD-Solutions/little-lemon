@@ -227,11 +227,10 @@
             <h2>Reservation</h2>
             <div class="booking_container">
                 <div class="booking_form">
-                    <form>
+                    <form method="get"  action="https://www.opentable.com/restaurant-search.aspx" target="_blank">
                         <div>
-                            <div>
-                            
-                                <select id="people_select">
+                            <div>                            
+                                <select id="people_select" name="partySize">
                                     <option value="1">1 person</option>
                                     <option value="2" selected=""selected">2 people</option>
                                     <option value="3">3 people</option>
@@ -244,14 +243,19 @@
                             </div>
                             <div>
                         
-                                <input type="text" id="date" name="date" onclick="(this.type='date')" onblur="if(!this.value)this.type='text'" placeholder="Date">                       
+                                <input type="text" id="date" name="startDate" onclick="(this.type='date')" onblur="if(!this.value)this.type='text'" placeholder="Date">                       
                             </div>
                             <div>
                             
-                                <input type="text" id="time" name="time" onclick="(this.type='time')" onblur="if(!this.value)this.type='text'" placeholder="Time">
+                                <input type="text" id="time" name="Restime" onclick="(this.type='time')" onblur="if(!this.value)this.type='text'" placeholder="Time">
                             </div>
                         </div>
                         <button type="submit" value="BOOK">BOOK</button>
+                        <input type="hidden" name="RestaurantID" class="RestaurantID" value="111103">
+                        <input type="hidden" name="rid" class="rid" value="111103">
+                        <input type="hidden" name="GeoID" class="GeoID" value="15">
+                        <input type="hidden" name="txtDateFormat" class="txtDateFormat" value="MM/dd/yyyy">
+                        <input type="hidden" name="RestaurantReferralID" class="RestaurantReferralID" value="111103">
                     </form>
                 </div>
             </div>
@@ -376,6 +380,51 @@
             <div class="swiper-button-next"></div>
                                   
         </section>
+        <section class="gallery_section">
+            <p class="heading_subtitle_gold">Restaurant</p>
+            <h2>Gallery</h2>
+            <div class="gallery_swiper swiper">
+                <div class="gallery_container swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="gallery_img">
+                            <img src="https://imaginem.io/cinnamon/wp-content/uploads/sites/13/2017/03/image3-750x750.jpg" alt="">
+                        </div>
+                        
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery_img">
+                            <img src="https://imaginem.io/cinnamon/wp-content/uploads/sites/13/2017/03/image5-750x750.jpg" alt="">
+                        </div>
+                        
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery_img">
+                            <img src="https://imaginem.io/cinnamon/wp-content/uploads/sites/13/2017/03/image5-1-750x750.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery_img">
+                            <img src="https://imaginem.io/cinnamon/wp-content/uploads/sites/13/2017/04/image14-750x750.jpg" alt="">
+                        </div>
+                        
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery_img">
+                            <img src="https://imaginem.io/cinnamon/wp-content/uploads/sites/13/2017/03/image24-750x750.jpg" alt="">
+                        </div>
+                        
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery_img">
+                            <img src="https://imaginem.io/cinnamon/wp-content/uploads/sites/13/2017/03/image7-750x750.jpg" alt="">
+                        </div>                        
+                    </div>
+                 
+                </div>
+            </div>   
+
+        </section>
+
         <section class="subscribe_section">
             <p class="heading_subtitle_gold">Subscribe</p>
             <h2>Newsletter</h2>
