@@ -79,7 +79,14 @@ h1:after,h2:after {
     position: relative;
     text-align: center;
 }
-
+.heading_more{
+    font-size: 1.25em;
+    color: #495e57;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 480px;
+}
 .page-loader {
     background: url(/img/res-page-loader.gif) 50% 50% no-repeat rgb(0,0,0);
 }
