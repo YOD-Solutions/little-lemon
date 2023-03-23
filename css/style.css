@@ -78,10 +78,7 @@ header,main,footer{
     margin:auto;
     position: relative;     
 }
-section{
-    visibility: hidden;
-   
-}
+
 h2 {
     text-align: center;
     color:#464646;
