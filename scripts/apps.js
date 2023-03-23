@@ -1,6 +1,6 @@
 
 let slidesPerView = 3; 
-let spaceBetween = 100;
+let spaceBetween = 70;
 let windowWidthInt = window.innerWidth;
 
 if(windowWidthInt < 320){
@@ -17,9 +17,9 @@ if(windowWidthInt < 320){
     spaceBetween = 50;            
 }else if(windowWidthInt >= 1200){
     slidesPerView= 4;
-    spaceBetween = 100;            
+    spaceBetween = 70;            
 }
-
+//--------- initialize menu section slider ---
 const menu_section = document.querySelector("section.menu_section");
 
 const menu_swiper = new Swiper('.menu_swiper', {
@@ -64,14 +64,60 @@ const menu_swiper = new Swiper('.menu_swiper', {
           },
         1200: {
           slidesPerView: 4,
-          spaceBetween: 100
+          spaceBetween: 70
         }
     },
-    onAny(resize){
-    let windowWidthNew = window.innerWidth;
-    if(windowWidthNew < 768){
-        this.slidesPerView = 2;
-        } 
+
+});
+
+//--------- initialize about section slider ---
+
+const about_section = document.querySelector("section.about_section");
+
+const about_swiper = new Swiper('.bio_swiper', {
+    speed: 400,
+    spaceBetween: spaceBetween,
+    slidesPerView:slidesPerView,    
+    freeMode: true,
+    loop: true,
+    lazyLoading: true,
+    keyboard: {
+      enabled: true
     },
-      
+    watchSlidesProgress: true,
+    navigation: {
+        nextEl: ".about_section .swiper-button-next",
+        prevEl: ".about_section .swiper-button-prev",
+    },
+    pagination: {
+        el: about_section.querySelector(".swiper-pagination"),
+        clickable: true,
+        renderBullet: function (index, className) {
+          return `<div class=${className}>
+        <span class="line"></span> 
+        </div>`;
+        }
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1
+          },
+        320: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        },
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 30
+          },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 30
+        }
+    },
+
   });
