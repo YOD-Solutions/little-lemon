@@ -679,7 +679,7 @@ main{
     
 }
 
-.menu_section:hover .swiper-button-next, .menu_section:hover .swiper-button-prev,.about_section:hover .swiper-button-next, .about_section:hover .swiper-button-prev{
+section:hover .swiper-button-next, section:hover .swiper-button-prev{
     display: flex; 
     transition: all 0.3s;
 }
