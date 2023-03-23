@@ -101,7 +101,7 @@ const about_swiper = new Swiper('.bio_swiper', {
     breakpoints: {
         0: {
             slidesPerView: 1,
-            spaceBetween: 50
+            spaceBetween: 20
           },
         576: {
             slidesPerView: 2,
@@ -123,7 +123,7 @@ const about_swiper = new Swiper('.bio_swiper', {
 
   });
 
-  //--------- initialize about section slider ---
+  //--------- initialize gallery section slider ---
 
 const gallery_section = document.querySelector("section.gallery_section");
 

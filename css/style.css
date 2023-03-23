@@ -86,6 +86,7 @@ h1:after,h2:after {
     margin-right: auto;
     text-align: center;
     max-width: 480px;
+    padding: 0 15px
 }
 .page-loader {
     background: url(/img/res-page-loader.gif) 50% 50% no-repeat rgb(0,0,0);
@@ -111,13 +112,17 @@ h1:after,h2:after {
     margin-bottom: 0px;
     background-color: rgba(25,25,25,.5);    
     box-shadow: 0px 10px 60px rgb(0 0 0 / 0%);
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     transition: all .5s cubic-bezier(.165, .84, .44, 1);
-    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+            backdrop-filter: blur(1px);
 }
 .large_screen_header.show{
     box-shadow: 0px 10px 60px rgb(0 0 0 / 10%);
-    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
     background-color: #000000BD;
     transition: all .5s cubic-bezier(.165, .84, .44, 1);
 }
@@ -183,9 +188,33 @@ nav a:hover{
     height: auto;
 }
 
-.small_screen_header .menu_toggle i{
-    color:white;
-    font-size: 20px;
+
+.menu_toggle {
+    cursor: pointer;
+    color: white;
+   
+}
+.menu_toggle .bar {
+    background: white;
+    height: 2px;
+    width: 20px;
+    display: block;
+    margin-bottom: 4px;
+
+}
+.menu_toggle .bar:nth-child(2), .menu_toggle .bar:nth-child(3) {
+    width: 15px;
+    margin-left: 5px;
+}
+.menu_toggle .bar:last-child {
+    margin-bottom: 0;
+}
+.menu_toggle:hover{
+    opacity: 0.75;
+}
+.menu_toggle:hover .bar:nth-child(2), .menu_toggle:hover .bar:nth-child(3) {
+    transform: translateX(-5px) scaleX(1.5);
+    transition: all ease-in-out 0.4s;
 }
 
 .small_menu_list{
@@ -379,23 +408,25 @@ main{
 
 .pizza-it{
     position:absolute;
-    animation: pizza-1 linear;
+    -webkit-animation: pizza-1 linear;
+            animation: pizza-1 linear;
     
 }
 
 .pizza_holder{
-    animation: pizza-img 1s linear;
-    animation-delay: 1s;
+    -webkit-animation: pizza-img 1s linear;
+            animation: pizza-img 1s linear;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
 }
 
 .pizza-img{
     width: 100%; 
     height: auto;   
-    animation: pizza_rotate 4s alternate infinite linear both;
-    animation-delay: 4s;
-    -webkit-box-shadow: 10px 10px 57px 0px rgb(103 114 148 / 20%);
-    -moz-box-shadow: 10px 10px 57px 0px rgba(103, 114, 148, 0.2);
-    -ms-box-shadow: 10px 10px 57px 0px rgba(103, 114, 148, 0.2);
+    -webkit-animation: pizza_rotate 4s alternate infinite linear both;   
+            animation: pizza_rotate 4s alternate infinite linear both;
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
     box-shadow: 10px 10px 57px 0px rgb(103 114 148 / 20%);
     border-radius: 100%;
 
@@ -405,8 +436,10 @@ main{
     top: -70px;
     right: -10px;
     bottom: 30px;
-    animation-duration: 1.5s;
-    animation-delay: 1.3s;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-delay: 1.3s;
+            animation-delay: 1.3s;
 }
 
 .pizza-2{
@@ -414,35 +447,57 @@ main{
     left: 30px;
     right: -120px;
     max-width:350px;
-    animation-duration: 1.8s;
-    animation-delay: 1.8s;
+    -webkit-animation-duration: 1.8s;
+            animation-duration: 1.8s;
+    -webkit-animation-delay: 1.8s;
+            animation-delay: 1.8s;
 }
 .pizza-3{
     top: 70px;
     left: -20px;
-    animation-duration: 2s;
-    animation-delay: 2s;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
 }
 
 .pizza-4{
     bottom: -60px;
     right: 230px;
-    animation-duration: 2.5s;
-    animation-delay: 2.5s;
+    -webkit-animation-duration: 2.5s;
+            animation-duration: 2.5s;
+    -webkit-animation-delay: 2.5s;
+            animation-delay: 2.5s;
 }
 
 .pizza-5{
     bottom: -60px;
     right: 10px;
-    animation-duration: 1.5s;
-    animation-delay: 1.5s;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-delay: 1.5s;
+            animation-delay: 1.5s;
 }
 .pizza-6{
     bottom: 60px;
     right: -20px;
-    animation-duration: 1.8s;
-    animation-delay: 1.8s;
+    -webkit-animation-duration: 1.8s;
+            animation-duration: 1.8s;
+    -webkit-animation-delay: 1.8s;
+            animation-delay: 1.8s;
     
+}
+
+
+@-webkit-keyframes pizza-img {
+    0%{
+        opacity: 0;
+        transform: translate3d(200px,0,0);
+    }
+    100%{
+        opacity: 1;
+        transform: none;
+    }
 }
 
 
@@ -456,12 +511,29 @@ main{
         transform: none;
     }
 }
+@-webkit-keyframes pizza_rotate {
+    0%{     
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(10deg);
+    }
+}
 @keyframes pizza_rotate {
     0%{     
         transform: rotate(0deg);
     }
     100%{
         transform: rotate(10deg);
+    }
+}
+@-webkit-keyframes pizza-1 {
+    0%{
+        opacity: 0;
+        transform: scale3d(0.3,0.3,0.3);
+    }
+    50%{
+        opacity: 1;
     }
 }
 @keyframes pizza-1 {
@@ -527,7 +599,7 @@ main{
     transition: all 1s ease-out 0s;
 }
 .upper_inner_header div,.lower_inner_header div{
-    color: #fafafa;
+    color: #f9f9f9fa;
     font-family: 'Caviar Dreams Bolder', sans-serif;
     font-size: 80px;
     text-transform: uppercase;
@@ -561,8 +633,18 @@ main{
    
 }
 .small_container article:hover{ 
-    animation:card_zoom 0.5s alternate linear;
+    -webkit-animation:card_zoom 0.5s alternate linear; 
+            animation:card_zoom 0.5s alternate linear;
  
+}
+@-webkit-keyframes card_zoom{
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+    
 }
 @keyframes card_zoom{
     0%,100%{
@@ -591,7 +673,8 @@ main{
 .small_container img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .small_container figcaption{   
@@ -877,13 +960,30 @@ section:hover .swiper-button-next, section:hover .swiper-button-prev{
     border-color: #FFFFFF73;
 }
 input::-webkit-calendar-picker-indicator{
-    filter: invert(1);
+    -webkit-filter: invert(1);
+            filter: invert(1);
 }
 .booking_section select{
     width: 208px;
 }
 .booking_section option{
     color: #495e57;
+}
+
+.booking_section input::-webkit-input-placeholder{
+    color: white;
+}
+
+.booking_section input::-moz-placeholder{
+    color: white;
+}
+
+.booking_section input:-ms-input-placeholder{
+    color: white;
+}
+
+.booking_section input::-ms-input-placeholder{
+    color: white;
 }
 
 .booking_section input::placeholder{
@@ -915,7 +1015,6 @@ input::-webkit-calendar-picker-indicator{
     display: inline-block;
     height: 5px;
     width: 5px;
-    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     right: 17px;
     transition: all 300ms ease;
@@ -929,7 +1028,6 @@ input::-webkit-calendar-picker-indicator{
     display: inline-block;
     height: 5px;
     width: 5px;
-    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     left:-11px;
     transition: all 300ms ease;
@@ -1000,6 +1098,22 @@ input::-webkit-calendar-picker-indicator{
     padding-left: 10px;
     background-color: white; 
     position: relative;  
+}
+.subscribe_section input::-webkit-input-placeholder{
+    font-size:15px;
+    font-family: "Josefin Sans",sans-serif;
+}
+.subscribe_section input::-moz-placeholder{
+    font-size:15px;
+    font-family: "Josefin Sans",sans-serif;
+}
+.subscribe_section input:-ms-input-placeholder{
+    font-size:15px;
+    font-family: "Josefin Sans",sans-serif;
+}
+.subscribe_section input::-ms-input-placeholder{
+    font-size:15px;
+    font-family: "Josefin Sans",sans-serif;
 }
 .subscribe_section input::placeholder{
     font-size:15px;
@@ -1183,6 +1297,8 @@ footer p{
         z-index: 5;
         background-color: rgba(25,25,25,.2);
         box-shadow: 0px 10px 60px rgb(0 0 0 / 0%);
+        height: -webkit-max-content;
+        height: -moz-max-content;
         height: max-content;  
     }
     .small_menu_list.init{
@@ -1191,7 +1307,8 @@ footer p{
 
     .small_screen_header.show{
         box-shadow: 0px 10px 60px rgb(0 0 0 / 10%);
-        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+                backdrop-filter: blur(12px);
         background-color: #000000BD;
     }
 
