@@ -100,9 +100,10 @@ const about_swiper = new Swiper('.bio_swiper', {
     },
     breakpoints: {
         0: {
-            slidesPerView: 1
+            slidesPerView: 1,
+            spaceBetween: 50
           },
-        320: {
+        576: {
             slidesPerView: 2,
             spaceBetween: 20
         },
