@@ -314,7 +314,7 @@ body.toggle_menu #overlay_background{
     transform:translate(-280px,0);
 }
 main{
-    background-color: white;
+    background-color: #f4f2ed;
 }
 
 .new_banner_container{
@@ -527,7 +527,7 @@ main{
     transition: all 1s ease-out 0s;
 }
 .upper_inner_header div,.lower_inner_header div{
-    color: #F5F5F5;
+    color: #fafafa;
     font-family: 'Caviar Dreams Bolder', sans-serif;
     font-size: 80px;
     text-transform: uppercase;
@@ -554,7 +554,7 @@ main{
     flex:1;
     text-align: center;
     margin: 10px;
-    background: #f4f2ed;   
+    background: white;   
     border-radius: 2px;
     position: relative;
     overflow: hidden;
@@ -605,7 +605,9 @@ main{
     background-color: #f9fafc;
     padding: 60px 0;
     position: relative;
-
+    background-image: url(/img/wood-grain-pattern-gray.png);
+    background-repeat: repeat;
+    background-position: center
 
 }
 
@@ -618,7 +620,7 @@ main{
     transition-delay: 1900ms;
 }
 .menu_swiper{
-    padding:50px 15px;
+    padding:30px 15px;
     max-width:1800px;
   
 }
@@ -704,10 +706,13 @@ section:hover .swiper-button-next, section:hover .swiper-button-prev{
     padding-top: 50px;
     padding-bottom: 80px;
     position: relative;
+    background-image: url(/img/wood-grain-pattern-gray.png);
+    background-repeat: repeat;
+    background-position: center
 }
 
 .bio_swiper{
-    padding: 50px 15px;
+    padding: 30px 15px;
     max-width: 1200px;
 }
 
@@ -942,7 +947,7 @@ input::-webkit-calendar-picker-indicator{
 }
 
 .gallery_section{
-    padding-top:90px;
+    padding-top:50px;
     position: relative;
     background-color: #f4f2ed;
 }
@@ -965,7 +970,10 @@ input::-webkit-calendar-picker-indicator{
 .subscribe_section{
     padding: 50px 0;
     position: relative;
-    background-color: #f4f2ed;
+    background-color: #f9fafc;
+    background-image: url(/img/wood-grain-pattern-gray.png);
+    background-repeat: repeat;
+    background-position: center
 }
 
 
@@ -1253,10 +1261,10 @@ footer p{
     .banner_text p{
         font-size:16px;
     }
-    .intro_section h2,.booking_section h2,.about_section h2,.menu_section h2,.subscribe_section h2{
+    .intro_section h2,.booking_section h2,.about_section h2,.menu_section h2,.subscribe_section h2,.gallery_section h2{
         font-size:24px;
     }
-    .intro_text,.about_section figure p,.address_container p,.menu_section figcaption{
+    .intro_text,.about_section figure p,.address_container p,.menu_section figcaption,.heading_more{
         font-size:16px;
     }  
     #footer_logo{
