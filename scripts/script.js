@@ -1,4 +1,5 @@
 
+const sections = document.querySelectorAll("section");
 const banner_header = document.querySelector('.banner_text');
 const upper_header = document.querySelector('.upper_inner_header');
 const lower_header = document.querySelector('.lower_inner_header');
@@ -11,8 +12,17 @@ const main_BoxTopInt = main.getBoundingClientRect().top;
 
 const observer = new IntersectionObserver(enteries => {   
     enteries.forEach(entry =>{
-        if(entry.isIntersecting){
-            
+        if(entry.isIntersecting){        
+        
+            if(entry.target.nodeName == "SECTION"){
+                entry.target.style.visibility="visible";                    
+                entry.target.style['animation-duration']='1000ms'; 
+                entry.target.style['animation-delay']='300ms'; 
+                entry.target.style['animation-name']='fadeInUp';                  
+                entry.target.classList.add("animated");
+                    
+            }
+
             if(entry.target == banner_header){
                 let title = entry.target.querySelectorAll('span.blast');
                 title.forEach((letter,index)=>{
@@ -22,7 +32,7 @@ const observer = new IntersectionObserver(enteries => {
                     letter.style.opacity = "1";
                 })
             }
-
+            
             function animateOnScroll(){ 
 
                 let headerBoxTop = 0;
@@ -75,6 +85,10 @@ observer.observe(banner_header);
 observer.observe(upper_header);
 observer.observe(lower_header);
 observer.observe(main);
+sections.forEach(section=>{
+    observer.observe(section);
+})
+
 
 //---- Small Screen Menu toggle click event---------
 

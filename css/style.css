@@ -78,7 +78,10 @@ header,main,footer{
     margin:auto;
     position: relative;     
 }
-
+section{
+    visibility: hidden;
+   
+}
 h2 {
     text-align: center;
     color:#464646;
@@ -555,6 +558,7 @@ main{
     letter-spacing: -5px;
 }
 
+
 .small_container{
     display:flex;
     justify-content: center;
@@ -592,7 +596,7 @@ main{
     flex:1;
     text-align: center;
     margin: 10px;
-    background: white;   
+    background: #f4f2ed;   
     border-radius: 2px;
     position: relative;
     overflow: hidden;
