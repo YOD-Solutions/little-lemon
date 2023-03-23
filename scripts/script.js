@@ -15,7 +15,7 @@ const observer = new IntersectionObserver(enteries => {
         if(entry.isIntersecting){        
         
             if(entry.target.nodeName == "SECTION"){
-                entry.target.style['animation-name']='fadeInUp';                 
+                entry.target.style['animation-name']='fadeInDown';                 
                 entry.target.style['animation-duration']='1000ms'; 
                 entry.target.style['animation-delay']='300ms';                 
                 entry.target.style.visibility="visible";                     
