@@ -6,44 +6,16 @@
 
 @font-face {
     font-family: 'Metropolis 1920 Regular';
+    font-display: swap;
     src: url('/fonts/Metropolis/Metropolis 1920 Regular.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'Caviar Dreams';
-    font-style: normal;
-    font-weight: normal;
-    src: url('/fonts/Caviar Dreams/CaviarDreams.woff') format('woff');
-}
-
-
-@font-face {
-    font-family: 'Caviar Dreams Italic';
-    font-style: normal;
-    font-weight: normal;
-    src: url('/fonts/Caviar Dreams/CaviarDreamsItalic.woff') format('woff');
-}
-
-
-@font-face {
-    font-family: 'Caviar Dreams Bold';
-    font-style: normal;
-    font-weight: bold;
-    src: url('/fonts/Caviar Dreams/CaviarDreams_Bold.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Caviar Dreams Bolder';
     font-style: normal;
     font-weight: bold;
+    font-display: swap;
     src: url('/fonts/Caviar Dreams/caviardreams_bold-webfont.woff2') format('woff2');
-}
-
-@font-face {
-    font-family: 'Caviar Dreams Bold Italic';
-    font-style: normal;
-    font-weight: normal;
-    src: url('/fonts/Caviar Dreams/CaviarDreams_BoldItalic.woff') format('woff');
 }
 
 
@@ -51,13 +23,16 @@
     font-family: 'arion_typeface_altregular';
     font-style: normal;
     font-weight: normal;
+    font-display: swap;
     src: url('/fonts/Arion/arion_typeface_alt-webfont-3.woff') format('woff');
 }
+
 html{
     font-size:14px;
 }
 body{
-    font-family: "Josefin Sans",sans-serif;    
+    font-family: "Josefin Sans",sans-serif;  
+    font-display: swap;  
     background-image: url(/img/bgfoodicon.png);
     position: relative;
     background-position: center;
@@ -408,7 +383,8 @@ main{
 }
 
 .pizza-img{
-    width: 100%;    
+    width: 100%; 
+    height: auto;   
     animation: pizza_rotate 4s alternate infinite linear both;
     animation-delay: 4s;
     -webkit-box-shadow: 10px 10px 57px 0px rgb(103 114 148 / 20%);
