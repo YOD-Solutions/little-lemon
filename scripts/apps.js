@@ -133,7 +133,6 @@ const gallery_swiper = new Swiper('.gallery_swiper', {
     slidesPerView:slidesPerView,    
     freeMode: true,
     loop: true,
-    autoplay: true,
     lazyLoading: true,
     keyboard: {
       enabled: true
@@ -165,5 +164,29 @@ const gallery_swiper = new Swiper('.gallery_swiper', {
           spaceBetween: 0
         }
     },
+
+  });
+
+    //--------- initialize gallery section slider ---
+
+const testimony_section = document.querySelector("section.testimony_section");
+
+const testimony_swiper = new Swiper('.testimony_swiper', {
+    speed: 400,
+    spaceBetween: 0,
+    slidesPerView:1,    
+    freeMode: true,
+    autoplay:true,
+    loop: true,
+    lazyLoading: true,
+    keyboard: {
+      enabled: true
+    },
+    watchSlidesProgress: true,
+    navigation: {
+        nextEl: ".testimony_section .swiper-button-next",
+        prevEl: ".testimony_section .swiper-button-prev",
+    }
+  
 
   });

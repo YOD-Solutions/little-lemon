@@ -362,7 +362,7 @@ main{
     background-repeat: repeat;
 }
 
-section.menu_section,section.booking_section,section.about_section,section.gallery_section,section.subscribe_section{
+section.menu_section,section.booking_section,section.about_section,section.gallery_section,section.subscribe_section,section.testimony_section{
     transform: translate3d(0,20px,0);
     opacity: 0;
     transition: transform 1000ms cubic-bezier(.190,1,.220,1),opacity 1000ms cubic-bezier(.190,1,.220,1);
@@ -990,7 +990,7 @@ input::-webkit-calendar-picker-indicator{
     position: relative;
 }
 .gallery_swiper{
-    margin-top: 60px;
+    margin-top: 30px;
 }
 .gallery_img{
     width:100%;
@@ -1006,15 +1006,46 @@ input::-webkit-calendar-picker-indicator{
     display: block;
 }
 
+.testimony_section{
+    background-color: #f9fafc;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    position: relative;
+    background-image: url(/img/wood-grain-pattern-gray.png);
+    background-repeat: repeat;
+    background-position: center;
+}
+.testimony_swiper{
+    max-width:1000px;
+}
+.testimony{
+    background-color: white;
+    margin: 20px auto;
+    text-align: center;
+    padding: 30px 20px;    
+    width: calc(100% - 60px);
+    box-shadow: 0px 0px 10px #cccc;
+}
+.comment{
+    font-size: 1.5em;
+    margin: 20px auto;
+    padding: 10px;
+    color: #495e57;
+}
+.customer_name{
+    font-size: 1.25em;
+    color: #495e57;
+}
+.rating i{
+    color: #E4B34C;
+    font-size: 15px;
+}
+
 .subscribe_section{
     padding: 50px 0;
     position: relative;
-    background-color: #f9fafc;
-    background-image: url(/img/wood-grain-pattern-gray.png);
-    background-repeat: repeat;
-    background-position: center
+   
 }
-
 
 .subscribe_section h2{
     position: relative;
@@ -1301,8 +1332,6 @@ footer p{
         margin-bottom: 12px;
     }
 
-
-
 }
 
 @media screen and (max-width:576px){
@@ -1313,11 +1342,14 @@ footer p{
     .banner_text p{
         font-size:16px;
     }
-    .intro_section h2,.booking_section h2,.about_section h2,.menu_section h2,.subscribe_section h2,.gallery_section h2{
+    .intro_section h2,.booking_section h2,.about_section h2,.menu_section h2,.subscribe_section h2,.gallery_section h2,.testimony_section h2{
         font-size:24px;
     }
-    .intro_text,.about_section figure p,.address_container p,.menu_section figcaption,.heading_more{
+    .intro_text,.about_section figure p,.address_container p,.menu_section figcaption,.heading_more,.customer_name{
         font-size:16px;
+    }
+    .comment{
+        font-size:1.25em;
     }  
     #footer_logo{
         padding-left: 15px;
