@@ -133,6 +133,7 @@ const gallery_swiper = new Swiper('.gallery_swiper', {
     slidesPerView:slidesPerView,    
     freeMode: true,
     loop: true,
+    autoplay: true,
     lazyLoading: true,
     keyboard: {
       enabled: true
