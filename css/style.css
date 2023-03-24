@@ -999,6 +999,7 @@ input::-webkit-calendar-picker-indicator{
 }
 .gallery_section img{
     width:100%;
+    height:auto;
     display: block;
 }
 
