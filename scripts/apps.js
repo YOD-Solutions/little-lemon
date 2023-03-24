@@ -176,7 +176,11 @@ const testimony_swiper = new Swiper('.testimony_swiper', {
     spaceBetween: 0,
     slidesPerView:1,    
     freeMode: true,
-    autoplay:true,
+    effect: 'fade',
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: true
+    },
     loop: true,
     lazyLoading: true,
     keyboard: {
@@ -190,3 +194,18 @@ const testimony_swiper = new Swiper('.testimony_swiper', {
   
 
   });
+
+  const testimonies = testimony_section.querySelectorAll(".testimony");
+
+  testimonies.forEach(testimony=>{
+    testimony.addEventListener("mouseenter",()=>{
+      testimony_swiper.autoplay.stop();
+    })
+  });
+
+  testimonies.forEach(testimony=>{
+    testimony.addEventListener("mouseleave",()=>{
+      testimony_swiper.autoplay.start();
+    })
+  });
+  
