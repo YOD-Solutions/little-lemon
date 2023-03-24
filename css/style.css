@@ -16,7 +16,21 @@
     font-display: swap;
     src: url('/fonts/Caviar Dreams/caviardreams_bold-webfont.woff2') format('woff2');
 }
+@font-face {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url('/fonts/josefin-sans/josefin-sans.woff2') format('woff');
+}
 
+@font-face {
+    font-family: 'Great Vibes';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url('/fonts/great-vibes/great-vibes.woff2') format('woff');
+}
 
 @font-face {
     font-family: 'arion_typeface_altregular';
