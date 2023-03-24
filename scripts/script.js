@@ -3,6 +3,8 @@ const banner_header = document.querySelector('.banner_text');
 const upper_header = document.querySelector('.upper_inner_header');
 const lower_header = document.querySelector('.lower_inner_header');
 const main = document.querySelector("main");
+const sections = document.querySelectorAll("section");
+
 
 const upper_headerBoxTopInt = upper_header.getBoundingClientRect().top;
 const lower_headerBoxTopInt = lower_header.getBoundingClientRect().bottom;
@@ -20,9 +22,13 @@ const observer = new IntersectionObserver(enteries => {
                     letter.style["transition-delay"]=300+index*100 +"ms";
                     letter.style["transition-duration"]="800ms";
                     letter.style.opacity = "1";
-                })
+                });
+                observer.unobserve(entry.target);
             }
-            
+            if(entry.target.nodeName == "SECTION" && entry.target.className != "banner_section" && entry.target.className != "intro_section" && entry.target.className != "map_section"){
+                entry.target.classList.add("animate");
+                observer.unobserve(entry.target);
+            }
             function animateOnScroll(){ 
 
                 let headerBoxTop = 0;
@@ -75,6 +81,9 @@ observer.observe(banner_header);
 observer.observe(upper_header);
 observer.observe(lower_header);
 observer.observe(main);
+sections.forEach(section=>{
+    observer.observe(section);
+})
 
 
 
