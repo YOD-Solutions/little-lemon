@@ -294,6 +294,12 @@ button.modal_close{
     border-right: 17px solid #fff;
     margin-left: 31px;
 }
+.modal_arrow_left:hover::after{
+    border-right: 17px solid #FFDEA0;
+}
+.modal_arrow_right:hover::after{
+    border-left: 17px solid #FFDEA0;
+}
 .modal_arrow_right:before{
     border-left: 27px solid #3f3f3f;
 }

@@ -135,6 +135,10 @@ const gallery_swiper = new Swiper('.gallery_swiper', {
     keyboard: {
       enabled: true
     },
+    zoom: {
+      maxRatio: 5,
+      containerClass:'swiper-zoom-container'
+    },
     watchSlidesProgress: true,
     navigation: {
         nextEl: ".gallery_section .swiper-button-next",
