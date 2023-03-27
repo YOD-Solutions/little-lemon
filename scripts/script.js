@@ -245,6 +245,7 @@ const imageModal =function(imgElement,imgSrc){
                 event.stopPropagation();
             });  
             
+            // ----- right arrow click event ----------------
             document.querySelector("button.modal_arrow_right").addEventListener("click",(event)=>{
                 event.stopPropagation();
             
@@ -273,7 +274,7 @@ const imageModal =function(imgElement,imgSrc){
                 }
                 
             }); 
-            
+            // ----- left arrow click event ----------------
             document.querySelector("button.modal_arrow_left").addEventListener("click",(event)=>{
                 event.stopPropagation();
                
@@ -301,8 +302,40 @@ const imageModal =function(imgElement,imgSrc){
                     }                   
                 }
                 
-                
             });
+
+            // ---- escape, left and right arrow key down event ---------
+
+            window.addEventListener("keydown",(event)=>{
+                event.stopPropagation();
+                if (event.defaultPrevented) {
+                    return; // Do nothing if the event was already processed
+                }               
+                switch(event.key){
+                    case "ArrowLeft":                        
+                        document.querySelector("button.modal_arrow_left").click();
+                        break;
+                    case "Left":                       
+                        document.querySelector("button.modal_arrow_left").click();                        
+                        break;
+                    case "ArrowRight":
+                        document.querySelector("button.modal_arrow_right").click();
+                        break;
+                    case "Right":
+                        document.querySelector("button.modal_arrow_right").click();
+                        break;
+                    case "Escape":
+                        document.querySelector("button.modal_close").click();
+                        break;
+                    case "Esc":
+                        document.querySelector("button.modal_close").click();
+                        break;
+                    default:
+                        return;
+                    
+                }
+                event.preventDefault();
+            },true);
 
             
           
