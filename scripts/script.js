@@ -180,7 +180,7 @@ const imageModal =function(imgElement,imgSrc){
                         <div class="modal_figure">
                             <button title="Close (Esc)" type="button" class="modal_close" style="display:none">&times</button>
                             <figure>
-                            <img class="modal_img" src="${image.getAttribute(imgSrc)}" alt="${image.getAttribute("alt")}" style="display:none;max-height:${window.innerHeight}px">
+                            <img class="modal_img" src="${image.getAttribute(imgSrc)}" alt="${image.getAttribute("alt")}" style="max-height:${window.innerHeight}px">
                                 <figcaption>
                                     <div class="modal_bottom_bar" style="display:none">
                                         <div class="modal_title">${image.getAttribute("alt")}</div>
@@ -192,6 +192,8 @@ const imageModal =function(imgElement,imgSrc){
                         
                     </div>
                     <div class="modal_preloader">Loading...</div>
+                    <button type="button" class="modal_arrow modal_arrow_left"> </button>
+                    <button type="button" class="modal_arrow modal_arrow_right"> </button>
                 </div>
             </div>`;
             
@@ -199,8 +201,8 @@ const imageModal =function(imgElement,imgSrc){
             document.querySelector("body").insertAdjacentHTML('beforeend',figure_modal);
             document.querySelector(".modal_container").style.opacity= "1";
             document.querySelector("img.modal_img").addEventListener("load",()=>{            
-                document.querySelector(".modal_preloader").style.display = "none";
-                document.querySelector("img.modal_img").style.display = "block";
+                document.querySelector(".modal_preloader").style.display = "none";        
+                document.querySelector("img.modal_img").style.opacity = "1";                
                 document.querySelector(".modal_bottom_bar").style.display = "block";
                 document.querySelector("button.modal_close").style.display = "block";
                 document.querySelector(".modal_wrap").style.overflow = "hidden auto";
@@ -208,25 +210,105 @@ const imageModal =function(imgElement,imgSrc){
                 
                 
             });
+
+            const totalImages = imgElement.length;
+            const currentIndexInit = parseInt(document.querySelector(".modal_counter").textContent);
+            
+            if(currentIndexInit == 1){
+                document.querySelector("button.modal_arrow_left").style.opacity = "0.3";
+                
+            }
+            if(currentIndexInit == totalImages){
+                document.querySelector("button.modal_arrow_right").style.opacity = "0.3";
+            }
+            if(totalImages == 1){
+                document.querySelector("button.modal_arrow_left").style.opacity = "0";
+                document.querySelector("button.modal_arrow_right").style.opacity = "0";
+            }
+
             
             document.querySelector("button.modal_close").addEventListener("click",()=>{        
                 document.querySelector(".modal_bg").remove();
                 document.querySelector(".modal_wrap").remove();
                 document.querySelector("html").style.removeProperty('overflow');
              
-            })
+            });
     
             document.querySelector(".modal_wrap").addEventListener("click",()=>{    
                 document.querySelector(".modal_bg").remove();
                 document.querySelector(".modal_wrap").remove();
                 document.querySelector("html").style.removeProperty('overflow');
             
-            })
+            });
+
+            document.querySelector(".modal_content").addEventListener("click",(event)=>{
+                event.stopPropagation();
+            });  
+            
+            document.querySelector("button.modal_arrow_right").addEventListener("click",(event)=>{
+                event.stopPropagation();
+            
+                let currentIndex = parseInt(document.querySelector(".modal_counter").textContent);
+
+                if(currentIndex < totalImages){
+                    document.querySelector("img.modal_img").style.opacity = "0"; 
+                    document.querySelector("img.modal_img").src = imgElement[currentIndex].getAttribute(imgSrc);
+                    document.querySelector("img.modal_img").alt = imgElement[currentIndex].alt;                    
+                    document.querySelector(".modal_preloader").style.display = "block";
+                    document.querySelector("img.modal_img").addEventListener("load",()=>{ 
+                        document.querySelector(".modal_preloader").style.display = "none";
+                        document.querySelector("img.modal_img").style.opacity = "1"; 
+                        document.querySelector(".modal_title").innerHTML = imgElement[currentIndex].alt;
+                        document.querySelector(".modal_counter").innerHTML = currentIndex + 1;
+                    });
+                    
+                    if(currentIndex == totalImages - 1){
+                        document.querySelector("button.modal_arrow_right").style.opacity = "0.3";
+                    }else{
+                        document.querySelector("button.modal_arrow_right").style.opacity = "1";
+                    }
+                    if(currentIndex + 1 > 1){
+                        document.querySelector("button.modal_arrow_left").style.opacity = "1";
+                    }
+                }
+                
+            }); 
+            
+            document.querySelector("button.modal_arrow_left").addEventListener("click",(event)=>{
+                event.stopPropagation();
+               
+                let currentIndex = parseInt(document.querySelector(".modal_counter").textContent);
+
+                if(currentIndex <= totalImages && currentIndex > 1){
+                    document.querySelector("img.modal_img").style.opacity = "0";
+                    document.querySelector("img.modal_img").src = imgElement[currentIndex - 2].getAttribute(imgSrc);
+                    document.querySelector("img.modal_img").alt = imgElement[currentIndex - 2].alt;
+                    document.querySelector(".modal_preloader").style.display = "block";
+                    document.querySelector("img.modal_img").addEventListener("load",()=>{
+                        document.querySelector("img.modal_img").style.opacity = "1"; 
+                        document.querySelector(".modal_title").innerHTML = imgElement[currentIndex - 2].alt;
+                        document.querySelector(".modal_counter").innerHTML = currentIndex -1;
+                     });
+                    
+                    if(currentIndex - 1 == 1){
+                        document.querySelector("button.modal_arrow_left").style.opacity = "0.3";
+                        
+                    }else{
+                        document.querySelector("button.modal_arrow_left").style.opacity = "1";
+                    } 
+                    if(currentIndex != totalImages - 1){
+                        document.querySelector("button.modal_arrow_right").style.opacity = "1";
+                    }                   
+                }
+                
+                
+            });
+
+            
           
         })
     })
 }
 
 imageModal(document.querySelectorAll(".gallery_img img"),"large-src");
-
 
