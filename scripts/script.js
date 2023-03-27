@@ -144,8 +144,8 @@ menuAnchor.forEach(anchor =>{
      
     
 });
-
 */
+
 //---- nav anchor tag click event to scoll smoothly
 
 document.querySelectorAll('nav a').forEach(anchor => {
@@ -168,5 +168,63 @@ document.querySelectorAll('.small_menu_list ul>li>a').forEach(anchor => {
     });
 });
 
+//---- image modal function ----------
+const imageModal =function(imgElement){
+    imgElement.forEach((image,index) => {
+        image.addEventListener("click",()=>{    
+            
+            const figure_modal = `<div class="modal_bg" style="visibility:visible"></div>
+            <div class="modal_wrap">
+                <div class="modal_container">
+                    <div class="modal_content">
+                        <div class="modal_figure">
+                            <button title="Close (Esc)" type="button" class="modal_close" style="display:none">&times</button>
+                            <figure>
+                            <img class="modal_img" src="${image.getAttribute("src")}" style="display:none;max-height:${window.innerHeight}px">
+                                <figcaption>
+                                    <div class="modal_bottom_bar" style="display:none">
+                                        <div class="modal_title">${image.getAttribute("alt")}</div>
+                                        <div class="modal_counter">${index+1}</div>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        
+                    </div>
+                    <div class="modal_preloader">Loading...</div>
+                </div>
+            </div>`;
+            
+            document.querySelector("html").style.overflow="hidden";
+            document.querySelector("body").insertAdjacentHTML('beforeend',figure_modal);
+            document.querySelector("img.modal_img").addEventListener("load",()=>{            
+                document.querySelector(".modal_preloader").style.display = "none";
+                document.querySelector("img.modal_img").style.display = "block";
+                document.querySelector(".modal_bottom_bar").style.display = "block";
+                document.querySelector("button.modal_close").style.display = "block";
+                document.querySelector(".modal_wrap").style.overflow = "hidden auto";
+                
+                
+            });
+            
+            document.querySelector("button.modal_close").addEventListener("click",()=>{        
+                document.querySelector(".modal_bg").remove();
+                document.querySelector(".modal_wrap").remove();
+                document.querySelector("html").style.removeProperty('overflow');
+             
+            })
+    
+            document.querySelector(".modal_wrap").addEventListener("click",()=>{    
+                document.querySelector(".modal_bg").remove();
+                document.querySelector(".modal_wrap").remove();
+                document.querySelector("html").style.removeProperty('overflow');
+            
+            })
+          
+        })
+    })
+}
+
+imageModal(document.querySelectorAll(".gallery_img img"));
 
 

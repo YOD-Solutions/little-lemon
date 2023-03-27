@@ -66,8 +66,8 @@ const menu_swiper = new Swiper('.menu_swiper', {
           slidesPerView: 4,
           spaceBetween: 70
         }
-    },
-
+    }
+    
 });
 
 //--------- initialize about section slider ---
