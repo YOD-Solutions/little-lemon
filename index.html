@@ -200,12 +200,12 @@
             <p class="heading_more">Curabitur ac nisl molestie, facilisis nibh ac, facilisis ligula. Integer congue malesuada eros congue varius</p>
             <div class="booking_container">
                 <div class="booking_form">
-                    <form method="get"  action="https://www.opentable.com/restaurant-search.aspx" target="_blank">
+                    <form action="https://www.opentable.com/restaurant-search.aspx" target="_blank">
                         <div>
                             <div>                            
-                                <select id="people_select" name="partySize">
+                                <select id="people_select" name="partysize">
                                     <option value="1">1 person</option>
-                                    <option value="2" selected=""selected">2 people</option>
+                                    <option value="2" selected="selected">2 people</option>
                                     <option value="3">3 people</option>
                                     <option value="4">4 people</option>
                                     <option value="5">5 people</option>
@@ -214,21 +214,18 @@
                                     <option value="8">8 people</option>
                                 </select>
                             </div>
-                            <div>
-                        
+                            <div>                        
                                 <input type="text" id="date" name="startDate" onclick="(this.type='date')" onblur="if(!this.value)this.type='text'" placeholder="Date">                       
                             </div>
                             <div>
                             
-                                <input type="text" id="time" name="Restime" onclick="(this.type='time')" onblur="if(!this.value)this.type='text'" placeholder="Time">
+                                <input type="text" id="time" name="ResTime" onclick="(this.type='time')" onblur="if(!this.value)this.type='text'" placeholder="Time">
                             </div>
                         </div>
-                        <button type="submit" value="BOOK">BOOK</button>
-                        <input type="hidden" name="RestaurantID" class="RestaurantID" value="111103">
-                        <input type="hidden" name="rid" class="rid" value="111103">
-                        <input type="hidden" name="GeoID" class="GeoID" value="15">
-                        <input type="hidden" name="txtDateFormat" class="txtDateFormat" value="MM/dd/yyyy">
-                        <input type="hidden" name="RestaurantReferralID" class="RestaurantReferralID" value="111103">
+                        <button type="submit" value="BOOK">BOOK</button>                        
+                        <input type="hidden" name="rid" class="rid" value="1">                 
+                        <input type="hidden" name="txtDateFormat" class="txtDateFormat" value="dd/mm/yyyy">
+                        <input type="hidden" name="restref" class="restref" value="1">
                     </form>
                 </div>
             </div>

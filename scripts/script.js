@@ -180,7 +180,7 @@ const imageModal =function(imgElement,imgSrc){
                         <div class="modal_figure">
                             <button title="Close (Esc)" type="button" class="modal_close" style="display:none">&times</button>
                             <figure>
-                            <img class="modal_img" src="${image.getAttribute(imgSrc)}" style="display:none;max-height:${window.innerHeight}px">
+                            <img class="modal_img" src="${image.getAttribute(imgSrc)}" alt="${image.getAttribute("alt")}" style="display:none;max-height:${window.innerHeight}px">
                                 <figcaption>
                                     <div class="modal_bottom_bar" style="display:none">
                                         <div class="modal_title">${image.getAttribute("alt")}</div>
@@ -197,12 +197,14 @@ const imageModal =function(imgElement,imgSrc){
             
             document.querySelector("html").style.overflow="hidden";
             document.querySelector("body").insertAdjacentHTML('beforeend',figure_modal);
+            document.querySelector(".modal_container").style.opacity= "1";
             document.querySelector("img.modal_img").addEventListener("load",()=>{            
                 document.querySelector(".modal_preloader").style.display = "none";
                 document.querySelector("img.modal_img").style.display = "block";
                 document.querySelector(".modal_bottom_bar").style.display = "block";
                 document.querySelector("button.modal_close").style.display = "block";
                 document.querySelector(".modal_wrap").style.overflow = "hidden auto";
+                
                 
                 
             });
