@@ -132,7 +132,7 @@ const gallery_swiper = new Swiper('.gallery_swiper', {
     spaceBetween: spaceBetween,
     slidesPerView:slidesPerView,    
     freeMode: true,
-    loop: true,
+    //loop: true,
     lazyLoading: true,
     keyboard: {
       enabled: true
@@ -167,7 +167,7 @@ const gallery_swiper = new Swiper('.gallery_swiper', {
 
   });
 
-    //--------- initialize gallery section slider ---
+    //--------- initialize testimony section slider ---
 
 const testimony_section = document.querySelector("section.testimony_section");
 
