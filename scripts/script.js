@@ -169,7 +169,7 @@ document.querySelectorAll('.small_menu_list ul>li>a').forEach(anchor => {
 });
 
 //---- image modal function ----------
-const imageModal =function(imgElement){
+const imageModal =function(imgElement,imgSrc){
     imgElement.forEach((image,index) => {
         image.addEventListener("click",()=>{    
             
@@ -180,7 +180,7 @@ const imageModal =function(imgElement){
                         <div class="modal_figure">
                             <button title="Close (Esc)" type="button" class="modal_close" style="display:none">&times</button>
                             <figure>
-                            <img class="modal_img" src="${image.getAttribute("src")}" style="display:none;max-height:${window.innerHeight}px">
+                            <img class="modal_img" src="${image.getAttribute(imgSrc)}" style="display:none;max-height:${window.innerHeight}px">
                                 <figcaption>
                                     <div class="modal_bottom_bar" style="display:none">
                                         <div class="modal_title">${image.getAttribute("alt")}</div>
@@ -225,6 +225,6 @@ const imageModal =function(imgElement){
     })
 }
 
-imageModal(document.querySelectorAll(".gallery_img img"));
+imageModal(document.querySelectorAll(".gallery_img img"),"large-src");
 
 
