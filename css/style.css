@@ -193,7 +193,7 @@ img.modal_img{
 .modal_counter {
     position: absolute;
     top: 0;
-    right: 47%;
+    right: 0;
     color: #fff;
     font-size: 12px;
     line-height: 18px;
@@ -213,7 +213,7 @@ button.modal_close{
     height: 44px;
     line-height: 44px;
     position: absolute;
-    right: -6px;
+    right: 0;
     padding-right: 6px;
     top: 0;
     text-decoration: none;
@@ -1591,7 +1591,9 @@ footer p{
     header img {
         max-width: 230px;
     }  
-   
+    .gallery_img:hover {
+        cursor: default;
+    }
     .banner_text p{
         font-size:16px;
     }

@@ -133,11 +133,8 @@ const gallery_swiper = new Swiper('.gallery_swiper', {
     freeMode: true,
     lazyPreloaderClass:'swiper-lazy-preloader',
     keyboard: {
-      enabled: true
-    },
-    zoom: {
-      maxRatio: 5,
-      containerClass:'swiper-zoom-container'
+      enabled: true,
+      onlyInViewport:true
     },
     watchSlidesProgress: true,
     navigation: {

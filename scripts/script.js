@@ -170,6 +170,12 @@ document.querySelectorAll('.small_menu_list ul>li>a').forEach(anchor => {
 
 //---- image modal function ----------
 const imageModal =function(imgElement,imgSrc){
+
+    if(window.innerWidth < 576){
+        return;
+    }
+    const totalImages = imgElement.length;
+    
     imgElement.forEach((image,index) => {
         image.addEventListener("click",()=>{    
             
@@ -178,13 +184,13 @@ const imageModal =function(imgElement,imgSrc){
                 <div class="modal_container">
                     <div class="modal_content">
                         <div class="modal_figure">
-                            <button title="Close (Esc)" type="button" class="modal_close" style="display:none">&times</button>
+                           
                             <figure>
                             <img class="modal_img" src="${image.getAttribute(imgSrc)}" alt="${image.getAttribute("alt")}" style="max-height:${window.innerHeight}px">
                                 <figcaption>
                                     <div class="modal_bottom_bar" style="display:none">
                                         <div class="modal_title">${image.getAttribute("alt")}</div>
-                                        <div class="modal_counter">${index+1}</div>
+                                        <div class="modal_counter">${index+1} of ${totalImages}</div>
                                     </div>
                                 </figcaption>
                             </figure>
@@ -192,8 +198,9 @@ const imageModal =function(imgElement,imgSrc){
                         
                     </div>
                     <div class="modal_preloader">Loading...</div>
-                    <button type="button" class="modal_arrow modal_arrow_left"> </button>
-                    <button type="button" class="modal_arrow modal_arrow_right"> </button>
+                    <button type="button" class="modal_arrow modal_arrow_left"></button>
+                    <button type="button" class="modal_arrow modal_arrow_right"></button>
+                    <button title="Close (Esc)" type="button" class="modal_close" style="display:none">&times</button>
                 </div>
             </div>`;
             
@@ -211,7 +218,7 @@ const imageModal =function(imgElement,imgSrc){
                 
             });
 
-            const totalImages = imgElement.length;
+            
             const currentIndexInit = parseInt(document.querySelector(".modal_counter").textContent);
             
             if(currentIndexInit == 1){
@@ -260,7 +267,7 @@ const imageModal =function(imgElement,imgSrc){
                         document.querySelector(".modal_preloader").style.display = "none";
                         document.querySelector("img.modal_img").style.opacity = "1"; 
                         document.querySelector(".modal_title").innerHTML = imgElement[currentIndex].alt;
-                        document.querySelector(".modal_counter").innerHTML = currentIndex + 1;
+                        document.querySelector(".modal_counter").innerHTML = currentIndex + 1 + " of "+ totalImages;
                     });
                     
                     if(currentIndex == totalImages - 1){
@@ -288,7 +295,7 @@ const imageModal =function(imgElement,imgSrc){
                     document.querySelector("img.modal_img").addEventListener("load",()=>{
                         document.querySelector("img.modal_img").style.opacity = "1"; 
                         document.querySelector(".modal_title").innerHTML = imgElement[currentIndex - 2].alt;
-                        document.querySelector(".modal_counter").innerHTML = currentIndex -1;
+                        document.querySelector(".modal_counter").innerHTML = currentIndex -1  + " of "+ totalImages;;
                      });
                     
                     if(currentIndex - 1 == 1){
@@ -307,7 +314,7 @@ const imageModal =function(imgElement,imgSrc){
             // ---- escape, left and right arrow key down event ---------
 
             window.addEventListener("keydown",(event)=>{
-                event.stopPropagation();
+                //event.stopPropagation();
                 if (event.defaultPrevented) {
                     return; // Do nothing if the event was already processed
                 }               
@@ -334,7 +341,7 @@ const imageModal =function(imgElement,imgSrc){
                         return;
                     
                 }
-                event.preventDefault();
+              
             },true);
 
             
