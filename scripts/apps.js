@@ -80,7 +80,6 @@ const about_swiper = new Swiper('.bio_swiper', {
     slidesPerView:slidesPerView,    
     freeMode: true,
     loop: true,
-    lazyLoading: true,
     keyboard: {
       enabled: true
     },
@@ -132,8 +131,7 @@ const gallery_swiper = new Swiper('.gallery_swiper', {
     spaceBetween: spaceBetween,
     slidesPerView:slidesPerView,    
     freeMode: true,
-    //loop: true,
-    lazyLoading: true,
+    lazyPreloaderClass:'swiper-lazy-preloader',
     keyboard: {
       enabled: true
     },
