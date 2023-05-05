@@ -110,18 +110,40 @@ overlayBackground.addEventListener("click",()=>{
 smallMenuClose.addEventListener("click",()=>{
     document.querySelector("body").classList.toggle("toggle_menu");
     document.querySelector("body").classList.toggle("restore");
-})
+});
+
+
 menuAnchor.forEach(anchor =>{
     anchor.addEventListener("click",()=>{
     document.querySelector("body").classList.toggle("toggle_menu");    
     anchor.parentElement.classList.add("active");
 
-    const siblings = n => [...n.parentElement.children].filter(c=>c.nodeType == 1 && c!=n);    
+    let siblings = n => [...n.parentElement.children].filter(c=>c.nodeType == 1 && c!=n);    
     siblings(anchor.parentElement).forEach(li=>{
         li.classList.remove("active");
     })
    
 });
+});
+
+
+//--- large menu submenu toggle-----------
+document.querySelectorAll('.menu_item>a').forEach(ele =>{
+    let siblings = n => [...n.parentElement.children].filter(c=>c.nodeType == 1 && c!=n);    
+    ele.addEventListener("mouseenter",()=>{
+        siblings(ele.parentElement).forEach(sibling=>{
+            sibling.classList.remove("on");
+        });
+        ele.parentElement.classList.add("on");
+
+    });
+   
+});
+
+document.querySelectorAll('ul.submenu').forEach(ele =>{
+    ele.addEventListener("mouseleave",()=>{
+        ele.parentElement.classList.remove("on");
+    });   
 });
 
  //-------- preloader remove ------------
